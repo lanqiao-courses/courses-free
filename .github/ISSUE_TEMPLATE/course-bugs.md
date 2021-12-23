@@ -1,10 +1,9 @@
 ---
 name: 报告课程问题
-about: course-bugs
-title: ''
-labels: ''
-assignees: ''
-
+about: Course Bugs
+title: "请简要描述问题"
+labels: ""
+assignees: ""
 ---
 
 ## 内容路径
