@@ -1,0 +1,36 @@
+name: 同步文档到蓝桥云课
+on:
+  push:
+    branches:
+      - product
+jobs:
+  sync-lab-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Get Changed Files
+        uses: trilom/file-changes-action@v1.2.4
+        with:
+          output: "json"
+          fileOutput: "json"
+      - name: Use pip Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install labdocs-update-cli
+        run: |
+          git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/lanqiao-courses/labdocs-update-cli.git
+          cd labdocs-update-cli && pip install --editable .
+      - name: Sync Changed Files to lanqiao.cn
+        run: |
+          labdocs login
+          echo "===== 同步修改文件 ====="
+          labdocs update --file $HOME/files_modified.json --repo $GITHUB_REPOSITORY
+          echo "===== 同步新增文件 ====="
+          labdocs update --file $HOME/files_added.json --repo $GITHUB_REPOSITORY
