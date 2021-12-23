@@ -25,25 +25,25 @@
 
 | **序号** |          **课程名称**          | **课程类别** |                  **课程链接**                   |
 | :------: | :----------------------------: | :----------: | :---------------------------------------------: |
-|    1     |        Python3 简明教程        |   编程语言   | [在线学习](https://www.lanqiao.cn/courses/596)  |
-|    2     |         C 语言简明教程         |   编程语言   |  [在线学习](https://www.lanqiao.cn/courses/57)  |
-|    3     |         Java 简明教程          |   编程语言   | [在线学习](https://www.lanqiao.cn/courses/1230) |
-|    4     |          PHP 编程入门          |   编程语言   |  [在线学习](https://www.lanqiao.cn/courses/23)  |
-|    5     |         Linux 基础入门         |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/1)   |
-|    6     |          Vim 基础入门          |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/2)   |
-|    7     |         MySQL 基础课程         |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/9)   |
-|    8     |    TCP IP 网络协议基础入门     |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/98)  |
-|    9     |         HTML5 简明教程         |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/43)  |
-|    10    |        Hadoop 基础入门         |   技术教程   | [在线学习](https://www.lanqiao.cn/courses/237)  |
-|    11    |    Python 实现图片转字符画     |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/370)  |
-|    12    |     Python 实现 2048 游戏      |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/368)  |
-|    13    |         Java 简明教程          |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/1230) |
-|    14    |    Python 实现色情图片识别     |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/589)  |
-|    15    |     Python 识别登录验证码      |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/364)  |
-|    16    | Python + 高德 API 实现地图找房 |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/599)  |
-|    17    |   Python 实现简单 Web 服务器   |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/552)  |
-|    18    |      C 语言实现简单计算器      |   趣味案例   |  [在线学习](https://www.lanqiao.cn/courses/75)  |
-|    19    |   Python 提取釜山行人物关系    |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/677)  |
+|    1     |        Python3 简明教程        |   编程语言   | [在线免费学](https://www.lanqiao.cn/courses/596)  |
+|    2     |         C 语言简明教程         |   编程语言   |  [在线免费学](https://www.lanqiao.cn/courses/57)  |
+|    3     |         Java 简明教程          |   编程语言   | [在线免费学](https://www.lanqiao.cn/courses/1230) |
+|    4     |          PHP 编程入门          |   编程语言   |  [在线免费学](https://www.lanqiao.cn/courses/23)  |
+|    5     |         Linux 基础入门         |   技术教程   |  [在线免费学](https://www.lanqiao.cn/courses/1)   |
+|    6     |          Vim 基础入门          |   技术教程   |  [在线免费学](https://www.lanqiao.cn/courses/2)   |
+|    7     |         MySQL 基础课程         |   技术教程   |  [在线免费学](https://www.lanqiao.cn/courses/9)   |
+|    8     |    TCP IP 网络协议基础入门     |   技术教程   |  [在线免费学](https://www.lanqiao.cn/courses/98)  |
+|    9     |         HTML5 简明教程         |   技术教程   |  [在线免费学](https://www.lanqiao.cn/courses/43)  |
+|    10    |        Hadoop 基础入门         |   技术教程   | [在线免费学](https://www.lanqiao.cn/courses/237)  |
+|    11    |    Python 实现图片转字符画     |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/370)  |
+|    12    |     Python 实现 2048 游戏      |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/368)  |
+|    13    |         Java 简明教程          |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/1230) |
+|    14    |    Python 实现色情图片识别     |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/589)  |
+|    15    |     Python 识别登录验证码      |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/364)  |
+|    16    | Python + 高德 API 实现地图找房 |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/599)  |
+|    17    |   Python 实现简单 Web 服务器   |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/552)  |
+|    18    |      C 语言实现简单计算器      |   趣味案例   |  [在线免费学](https://www.lanqiao.cn/courses/75)  |
+|    19    |   Python 提取釜山行人物关系    |   趣味案例   | [在线免费学](https://www.lanqiao.cn/courses/677)  |
 
 ## 许可协议
 
