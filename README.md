@@ -1,4 +1,4 @@
-![lanqiao-header-logo](https://static.shiyanlou.com/lanqiao/frontend/dist/img/lanqiao-header-logo.9b2adbf.svg)
+![1640587560164](https://cdn.jsdelivr.net/gh/huhuhang/cdn@master/images/2021/12/1640587560164.svg)
 
 本项目将会逐步开源 [蓝桥云课](https://www.lanqiao.cn/) 部分优质免费课程，我们期望和用户一起来完善这些实验课程，打造更好的学习体验。
 
