@@ -1,0 +1,28 @@
+name: 自动同步文档到蓝桥云课
+on:
+  push:
+    branches:
+      - master
+jobs:
+  auto-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: product
+      - name: Reset promotion branch
+        run: |
+          git fetch origin master:master
+          git reset --hard master
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: product-promotion
+          reviewers: huhuhang
+          title: "自动同步文档到蓝桥云课"
+          labels: 自动同步
+          body: |
+            说明:
+
+            - 这是一个自动生成的 PR，将保持 master 和 product 分支内容一致。
+            - 课程内容，会在此 PR 合并之后自动同步上线。
