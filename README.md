@@ -1,4 +1,4 @@
-![lanqiao-header-logo](https://static.shiyanlou.com/lanqiao/frontend/dist/img/lanqiao-header-logo.9b2adbf.svg)
+![1640587560164](https://cdn.jsdelivr.net/gh/huhuhang/cdn@master/images/2021/12/1640587560164.svg)
 
 本项目将会逐步开源 [蓝桥云课](https://www.lanqiao.cn/) 部分优质免费课程，我们期望和用户一起来完善这些实验课程，打造更好的学习体验。
 
@@ -23,30 +23,50 @@
 
 目前已经开源的课程列表如下：
 
-| **序号** |          **课程名称**          | **课程类别** |                  **课程链接**                   |
-| :------: | :----------------------------: | :----------: | :---------------------------------------------: |
-|    1     |        Python3 简明教程        |   编程语言   | [在线学习](https://www.lanqiao.cn/courses/596)  |
-|    2     |         C 语言简明教程         |   编程语言   |  [在线学习](https://www.lanqiao.cn/courses/57)  |
-|    3     |         Java 简明教程          |   编程语言   | [在线学习](https://www.lanqiao.cn/courses/1230) |
-|    4     |          PHP 编程入门          |   编程语言   |  [在线学习](https://www.lanqiao.cn/courses/23)  |
-|    5     |         Linux 基础入门         |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/1)   |
-|    6     |          Vim 基础入门          |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/2)   |
-|    7     |         MySQL 基础课程         |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/9)   |
-|    8     |    TCP IP 网络协议基础入门     |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/98)  |
-|    9     |         HTML5 简明教程         |   技术教程   |  [在线学习](https://www.lanqiao.cn/courses/43)  |
-|    10    |        Hadoop 基础入门         |   技术教程   | [在线学习](https://www.lanqiao.cn/courses/237)  |
-|    11    |    Python 实现图片转字符画     |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/370)  |
-|    12    |     Python 实现 2048 游戏      |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/368)  |
-|    13    |         Java 简明教程          |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/1230) |
-|    14    |    Python 实现色情图片识别     |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/589)  |
-|    15    |     Python 识别登录验证码      |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/364)  |
-|    16    | Python + 高德 API 实现地图找房 |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/599)  |
-|    17    |   Python 实现简单 Web 服务器   |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/552)  |
-|    18    |      C 语言实现简单计算器      |   趣味案例   |  [在线学习](https://www.lanqiao.cn/courses/75)  |
-|    19    |   Python 提取釜山行人物关系    |   趣味案例   | [在线学习](https://www.lanqiao.cn/courses/677)  |
+| **课程ID** | **课程名称** | **课程标签** | **课程链接** |
+|---|---|---|---|
+| 1 | Linux 基础入门 | Linux,基础入门,新手入门 | [在线免费学](https://www.lanqiao.cn/courses/1) |
+| 2 | Vim 基础入门 | Linux,新手入门,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/2) |
+| 9 | MySQL 基础课程 | MySQL | [在线免费学](https://www.lanqiao.cn/courses/9) |
+| 11 | Go 语言简明教程 | Go,Go,简明教程 | [在线免费学](https://www.lanqiao.cn/courses/11) |
+| 12 | MongoDB 基础教程 | MongoDB,NoSQL | [在线免费学](https://www.lanqiao.cn/courses/12) |
+| 22 | jQuery 基础入门 | Web,jQuery,基础入门,JavaScript | [在线免费学](https://www.lanqiao.cn/courses/22) |
+| 23 | PHP 编程入门 | PHP | [在线免费学](https://www.lanqiao.cn/courses/23) |
+| 35 | Hadoop 部署及管理 | Hadoop | [在线免费学](https://www.lanqiao.cn/courses/35) |
+| 37 | HBASE 基础入门 | Hadoop,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/37) |
+| 39 | Apache Mahout 基础入门 | Hadoop,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/39) |
+| 43 | HTML5 简明教程 | Web,简明教程,HTML | [在线免费学](https://www.lanqiao.cn/courses/43) |
+| 44 | Node.js 基础入门 | Node.js,基础入门,Web | [在线免费学](https://www.lanqiao.cn/courses/44) |
+| 57 | C 语言简明教程 | C,简明教程 | [在线免费学](https://www.lanqiao.cn/courses/57) |
+| 68 | Linux 命令基础入门 | Linux,Shell,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/68) |
+| 70 | Python 实现文本解析器 | Python | [在线免费学](https://www.lanqiao.cn/courses/70) |
+| 75 | C 语言实现简单计算器 | C | [在线免费学](https://www.lanqiao.cn/courses/75) |
+| 90 | 正则表达式基础入门 | Linux,Shell,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/90) |
+| 98 | TCP IP 网络协议基础入门 | 基础入门,计算机网络 | [在线免费学](https://www.lanqiao.cn/courses/98) |
+| 106 | Redis 简明教程 | NoSQL,Redis,简明教程 | [在线免费学](https://www.lanqiao.cn/courses/106) |
+| 144 | HTML 实现扫雷游戏 | Web,CSS,JavaScript | [在线免费学](https://www.lanqiao.cn/courses/144) |
+| 237 | Hadoop 基础入门 | Hadoop,Java,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/237) |
+| 539 | Java 函数式编程 | Java | [在线免费学](https://www.lanqiao.cn/courses/539) |
+| 596 | Python3 简明教程 | Python,简明教程 | [在线免费学](https://www.lanqiao.cn/courses/596) |
+| 834 | 快速开始一个 Go 程序 | Go | [在线免费学](https://www.lanqiao.cn/courses/834) |
+| 855 | R 语言基础入门 | R,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/855) |
+| 944 | 高级 Bash 脚本编程指南 | Linux,Shell | [在线免费学](https://www.lanqiao.cn/courses/944) |
+| 1035 | Git 与 GitHub 入门实践 | Git,新手入门 | [在线免费学](https://www.lanqiao.cn/courses/1035) |
+| 1230 | Java 简明教程 | Java,简明教程 | [在线免费学](https://www.lanqiao.cn/courses/1230) |
+| 1238 | JavaScript 基础入门 | Web,JavaScript,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/1238) |
+| 1262 | Vue.js 基础入门 | Vue.js,基础入门,Web | [在线免费学](https://www.lanqiao.cn/courses/1262) |
+| 1265 | Python 实现常见数据结构 | Python,数据结构 | [在线免费学](https://www.lanqiao.cn/courses/1265) |
+| 1330 | Python 新手入门课 | Python,新手入门 | [在线免费学](https://www.lanqiao.cn/courses/1330) |
+| 1403 | Linux 运维新手入门课 | Linux,Nginx,新手入门 | [在线免费学](https://www.lanqiao.cn/courses/1403) |
+| 1485 | Julia 简明教程 | Julia,简明教程 | [在线免费学](https://www.lanqiao.cn/courses/1485) |
+| 1499 | 通过例子学 Rust | Rust | [在线免费学](https://www.lanqiao.cn/courses/1499) |
+| 2023 | TypeScript 基础入门 | TypeScript,JavaScript,基础入门 | [在线免费学](https://www.lanqiao.cn/courses/2023) |
+| 3821 | Java 新手入门课 | 新手入门,Java | [在线免费学](https://www.lanqiao.cn/courses/3821) |
+| 3946 | Python 3 新特性快速上手 | Python | [在线免费学](https://www.lanqiao.cn/courses/3946) |
+| 7635 | Apache Log4j 2 远程代码执行漏洞详解 | 系统安全,Java | [在线免费学](https://www.lanqiao.cn/courses/7635) |
 
 ## 许可协议
 
-本作品采用 [知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/) 进行许可。
+本作品采用 [知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/) 进行许可。如果您是高校教师，可以 [免费申请试用蓝桥云课](https://www.lanqiao.cn/saas/school/)。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
