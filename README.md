@@ -14,10 +14,7 @@
 
 ### 我要怎么做？
 
-1. 了解 [实验文档模板](https://github.com/lanqiao-courses/free-courses/discussions/6)。
-2. 阅读 [文档格式规范](https://github.com/lanqiao-courses/free-courses/discussions/3)。
-3. 了解 [仓库存放结构](https://github.com/lanqiao-courses/free-courses/discussions/12)。
-4. 阅读 [仓库提交方法](https://github.com/lanqiao-courses/free-courses/discussions/8)。
+- 阅读 [贡献者手册](https://github.com/lanqiao-courses/courses-free/discussions/categories/%E8%B4%A1%E7%8C%AE%E8%80%85%E6%89%8B%E5%86%8C)。
 
 ## 课程列表
 
