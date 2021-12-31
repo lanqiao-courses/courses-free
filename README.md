@@ -8,8 +8,8 @@
 
 ### 我能做什么？
 
-- **自发修订课程内容**：如果你发现课程内容有错误，或者有值得优化和修订的地方，可以直接 Fork 本仓库，并提交 Pull Requests 给我们。凡被合并到 `master` 主分支的内容，我们会主动联系支付稿酬，并有机会成为我们的 [签约作者](https://www.lanqiao.cn/contribute/)。
-- **修订课程已知问题**：在仓库的 [Issues 列表](https://github.com/lanqiao-courses/free-courses/issues) 中有目前课程存在的部分已知问题。你可以尝试解决这些问题，并提交 Pull Requests 给我们。凡被合并到 `master` 主分支的内容，我们会主动联系支付稿酬，并有机会成为我们的 [签约作者](https://www.lanqiao.cn/contribute/)。
+- **自发修订课程内容**：如果你发现课程内容有错误，或者有值得优化和修订的地方，可以 [开出 issues](https://github.com/lanqiao-courses/courses-free/issues/new/choose)，蓝桥云课官方会进行确认。确认问题后，官方会分派 issues 并引导进行修复。凡被合并到 `master` 主分支的内容，我们会主动联系支付稿酬，并有机会成为我们的 [签约作者](https://www.lanqiao.cn/contribute/)。
+- **修订课程已知问题**：在仓库的 [Issues 列表](https://github.com/lanqiao-courses/free-courses/issues) 中有官方开出的已知问题。你可以评论 issues 认领，并尝试解决这些问题。凡被合并到 `master` 主分支的内容，我们会主动联系支付稿酬，并有机会成为我们的 [签约作者](https://www.lanqiao.cn/contribute/)。
 - **想要提交新的课程**：如果你想要给蓝桥云课制作新的课程，欢迎 [申请成为我们的作者](https://www.lanqiao.cn/contribute/)。
 
 ### 我要怎么做？
