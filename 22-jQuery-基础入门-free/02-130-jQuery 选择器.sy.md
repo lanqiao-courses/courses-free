@@ -64,12 +64,10 @@ enable_checker: true
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
   </head>
   <body>
-    <div id="">
-      实验楼
-    </div>
+    <div id="">实验楼</div>
 
     <script type="text/javascript">
-      document.getElementById('syl').style.color = 'red';
+      document.getElementById("syl").style.color = "red";
     </script>
   </body>
 </html>
@@ -90,13 +88,11 @@ enable_checker: true
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
   </head>
   <body>
-    <div id="">
-      实验楼
-    </div>
+    <div id="">实验楼</div>
 
     <script type="text/javascript">
-      if (document.getElementById('syl')) {
-        document.getElementById('syl').style.color = 'red';
+      if (document.getElementById("syl")) {
+        document.getElementById("syl").style.color = "red";
       }
     </script>
   </body>
@@ -114,12 +110,10 @@ enable_checker: true
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
   </head>
   <body>
-    <div id="">
-      实验楼
-    </div>
+    <div id="">实验楼</div>
 
     <script type="text/javascript">
-      $('#syl').css('color', 'red');
+      $("#syl").css("color", "red");
     </script>
   </body>
 </html>
@@ -128,21 +122,21 @@ enable_checker: true
 另外需要特别注意的是，`$('#syl')` 获取的永远是对象，即使网页上没有此元素，因为当要用 jQuery 来检查某个元素再网页上是否存在时，不能使用下面的代码：
 
 ```js
-if ($('#syl')) {
+if ($("#syl")) {
 }
 ```
 
 而应该根据获取到元素的长度来判断，代码如下所示：
 
 ```js
-if ($('#syl').length > 0) {
+if ($("#syl").length > 0) {
 }
 ```
 
 或者转化成 DOM 对象来判断，代码如下：
 
 ```js
-if ($('#syl')[0]) {
+if ($("#syl")[0]) {
 }
 ```
 
@@ -177,10 +171,10 @@ if ($('#syl')[0]) {
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#demo').css({
-          width: '100px',
-          height: '100px',
-          'background-color': 'red',
+        $("#demo").css({
+          width: "100px",
+          height: "100px",
+          "background-color": "red",
         });
       });
     </script>
@@ -213,10 +207,10 @@ if ($('#syl')[0]) {
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.demo').css({
-          width: '100px',
-          height: '100px',
-          'background-color': 'red',
+        $(".demo").css({
+          width: "100px",
+          height: "100px",
+          "background-color": "red",
         });
       });
     </script>
@@ -248,10 +242,10 @@ if ($('#syl')[0]) {
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').css({
-          width: '100px',
-          height: '100px',
-          'background-color': 'red',
+        $("div").css({
+          width: "100px",
+          height: "100px",
+          "background-color": "red",
         });
       });
     </script>
@@ -281,10 +275,10 @@ if ($('#syl')[0]) {
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('*').css({
-          width: '100px',
-          height: '100px',
-          'background-color': 'red',
+        $("*").css({
+          width: "100px",
+          height: "100px",
+          "background-color": "red",
         });
       });
     </script>
@@ -321,8 +315,8 @@ if ($('#syl')[0]) {
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div,a').css({
-          'font-size': '30px',
+        $("div,a").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -363,8 +357,8 @@ if ($('#syl')[0]) {
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.demo a').css({
-          'font-size': '30px',
+        $(".demo a").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -407,8 +401,8 @@ if ($('#syl')[0]) {
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.demo>a').css({
-          'font-size': '30px',
+        $(".demo>a").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -443,8 +437,8 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.demo+a').css({
-          'font-size': '30px',
+        $(".demo+a").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -479,8 +473,8 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
     <a href="https://www.lanqiao.cn/">SHIYANLOU</a>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.demo~a').css({
-          'font-size': '30px',
+        $(".demo~a").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -582,8 +576,8 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
     <input text="textaera" />
     <script type="text/javascript">
       $(document).ready(function () {
-        $(':input').css({
-          height: '300px',
+        $(":input").css({
+          height: "300px",
         });
       });
     </script>
@@ -601,7 +595,7 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
 
 ```js
 //假定已经有一个id名为form1的表单
-$('#form1 :text').lenth;
+$("#form1 :text").lenth;
 ```
 
 同理，其他的表单选择器的操作与此类似大家可以自行尝试着去写一写体验一番。更多例子可以访问 [jQuery 中文官网表单](https://www.jquery123.com/category/selectors/form-selectors/)。
@@ -667,8 +661,8 @@ $('#form1 :text').lenth;
     <input text="textaera" />
     <script type="text/javascript">
       $(document).ready(function () {
-        $('input:first').css({
-          height: '300px',
+        $("input:first").css({
+          height: "300px",
         });
       });
     </script>
@@ -710,7 +704,7 @@ $('#form1 :text').lenth;
     <script type="text/javascript">
       $(document).ready(function () {
         $("div:contains('shiyanlou')").css({
-          'font-size': '30px',
+          "font-size": "30px",
         });
       });
     </script>
@@ -747,7 +741,7 @@ $('#form1 :text').lenth;
     <div>shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div:visible').css({ 'font-size': '30px' });
+        $("div:visible").css({ "font-size": "30px" });
       });
     </script>
   </body>
@@ -799,8 +793,8 @@ $('#form1 :text').lenth;
     <div class="shiyanlou">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div[class]').css({
-          'font-size': '30px',
+        $("div[class]").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -853,8 +847,8 @@ $('#form1 :text').lenth;
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.demo div:first-child').css({
-          'font-size': '30px',
+        $(".demo div:first-child").css({
+          "font-size": "30px",
         });
       });
     </script>
@@ -895,8 +889,8 @@ $('#form1 :text').lenth;
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('input:checked').css({
-          width: '300px',
+        $("input:checked").css({
+          width: "300px",
         });
       });
     </script>

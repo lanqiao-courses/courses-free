@@ -57,20 +57,20 @@ canvas 元素本身并不能实现图形绘制，所有的绘制工作必须要�
 添加了 id 属性后，找到对应的 canvas 元素：
 
 ```js
-var myCanvas = document.getElementById('myCanvas');
+var myCanvas = document.getElementById("myCanvas");
 // 通过document.getElementById来找到id为myCanvas的元素
 ```
 
 然后通过 canvas 元素的 getContext()方法获取上下文，即创建 Context 对象，以获取允许进行绘制的 2D 环境。
 
 ```js
-var ctx = myCanvas.getContext('2d');
+var ctx = myCanvas.getContext("2d");
 ```
 
 最后通过 Context 对象的相关方法完成绘制，比如：fillStyle()等。
 
 ```js
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 //设置矩形的位置和尺寸（位置从 左上角原点坐标开始，尺寸为100*100的矩形）
 ctx.fillRect(0, 0, 100, 100);
 ```
@@ -92,10 +92,10 @@ ctx.fillRect(0, 0, 100, 100);
     </canvas>
 
     <script type="text/javascript">
-      var myCanvas = document.getElementById('mycanvas');
-      var ctx = myCanvas.getContext('2d');
+      var myCanvas = document.getElementById("mycanvas");
+      var ctx = myCanvas.getContext("2d");
       //设置颜色
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = "red";
       //设置矩形的位置和尺寸（位置从 左上角原点坐标开始，尺寸为100*100的矩形）
       ctx.fillRect(0, 0, 100, 100);
     </script>
@@ -143,9 +143,9 @@ ctx.fillRect(0, 0, 100, 100);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       // 开始路径绘制
       ctx.beginPath();
       // 设置路径起点，坐标为(20,20)
@@ -155,7 +155,7 @@ ctx.fillRect(0, 0, 100, 100);
       // 设置线宽
       ctx.lineWidth = 2.0;
       // 设置线的颜色
-      ctx.strokeStyle = '#CC0000';
+      ctx.strokeStyle = "#CC0000";
       // 绘制已定义的路径
       ctx.stroke();
     </script>
@@ -185,9 +185,9 @@ ctx.fillRect(0, 0, 100, 100);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       // 开始路径绘制
       ctx.beginPath();
       // 设置路径起点，坐标为(20,20)
@@ -201,7 +201,7 @@ ctx.fillRect(0, 0, 100, 100);
       // 设置线宽
       ctx.lineWidth = 2.0;
       // 设置线的颜色
-      ctx.strokeStyle = '#CC0000';
+      ctx.strokeStyle = "#CC0000";
       // 绘制已定义的路径
       ctx.stroke();
     </script>
@@ -253,9 +253,9 @@ ctx.rect(x,y,width,height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //绘制矩形
       ctx.rect(10, 10, 100, 200);
       //绘制已定义的路径
@@ -297,9 +297,9 @@ ctx.strokeRect(x, y, width, height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //绘制矩形
       ctx.strokeRect(10, 10, 100, 200);
     </script>
@@ -335,9 +335,9 @@ ctx.fillRect(x, y, width, height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //绘制矩形
       ctx.fillRect(10, 10, 100, 200);
     </script>
@@ -377,9 +377,9 @@ ctx.clearRect(x, y, width, height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //绘制矩形
       ctx.fillRect(10, 10, 100, 200);
       //清空指定像素
@@ -433,9 +433,9 @@ ctx.arc(x, y, r, sAngle, eAngle, counterclockwise);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //开始路径绘制
       ctx.beginPath();
       //绘制圆
@@ -469,9 +469,9 @@ ctx.arc(x, y, r, sAngle, eAngle, counterclockwise);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //开始路径绘制
       ctx.beginPath();
       //绘制圆
@@ -527,11 +527,11 @@ ctx.fillStyle = color | gradient | pattern;
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //填充为红色
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = "red";
       //绘制实心矩形
       ctx.fillRect(10, 10, 100, 200);
     </script>
@@ -593,16 +593,16 @@ gradient.addColorStop(stop, color);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //设置渐变色
       var gradient = ctx.createLinearGradient(0, 0, 170, 0);
-      gradient.addColorStop(0, 'red');
-      gradient.addColorStop('0.2', 'orange');
-      gradient.addColorStop('0.5', 'yellow');
-      gradient.addColorStop('0.7', 'green');
-      gradient.addColorStop(1, 'blue');
+      gradient.addColorStop(0, "red");
+      gradient.addColorStop("0.2", "orange");
+      gradient.addColorStop("0.5", "yellow");
+      gradient.addColorStop("0.7", "green");
+      gradient.addColorStop(1, "blue");
       //填充色为渐变色
       ctx.fillStyle = gradient;
       //绘制实心矩形
@@ -654,16 +654,16 @@ ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //设置渐变色
       var gradient = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
-      gradient.addColorStop(0, 'red');
-      gradient.addColorStop('0.2', 'orange');
-      gradient.addColorStop('0.5', 'yellow');
-      gradient.addColorStop('0.7', 'green');
-      gradient.addColorStop(1, 'blue');
+      gradient.addColorStop(0, "red");
+      gradient.addColorStop("0.2", "orange");
+      gradient.addColorStop("0.5", "yellow");
+      gradient.addColorStop("0.7", "green");
+      gradient.addColorStop(1, "blue");
       //填充色为渐变色
       ctx.fillStyle = gradient;
       //绘制实心矩形
@@ -707,12 +707,12 @@ ctx.fill();
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //绘制矩形
       ctx.rect(20, 20, 150, 100);
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = "red";
       ctx.fill();
     </script>
   </body>
@@ -761,11 +761,11 @@ ctx.fillText(text, x, y, maxWidth);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //绘制实心文本
-      ctx.fillText('Hello Syl!', 10, 50);
+      ctx.fillText("Hello Syl!", 10, 50);
     </script>
   </body>
 </html>
@@ -803,13 +803,13 @@ ctx.strokeText(text, x, y, maxWidth);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //设置字体样式
-      ctx.font = '50px Georgia';
+      ctx.font = "50px Georgia";
       //绘制空心文本
-      ctx.strokeText('Hello Syl!', 10, 50);
+      ctx.strokeText("Hello Syl!", 10, 50);
     </script>
   </body>
 </html>
@@ -828,7 +828,7 @@ ctx.strokeText(text, x, y, maxWidth);
 使用 `textAlign` 属性设置或返回文本内容的当前对齐方式。语法为：
 
 ```js
-ctx.textAlign = 'center|end|left|right|start';
+ctx.textAlign = "center|end|left|right|start";
 ```
 
 参数说明：
@@ -863,31 +863,31 @@ ctx.textAlign = 'center|end|left|right|start';
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //画一条线便于展示
-      ctx.strokeStyle = 'blue';
+      ctx.strokeStyle = "blue";
       ctx.moveTo(200, 20);
       ctx.lineTo(200, 180);
       ctx.stroke();
       //设置字体样式
-      ctx.font = '20px Georgia';
+      ctx.font = "20px Georgia";
       //值为start的情况
-      ctx.textAlign = 'start';
-      ctx.strokeText('Hello Syl!', 200, 20);
+      ctx.textAlign = "start";
+      ctx.strokeText("Hello Syl!", 200, 20);
       //值为center的情况
-      ctx.textAlign = 'center';
-      ctx.strokeText('Hello Syl!', 200, 60);
+      ctx.textAlign = "center";
+      ctx.strokeText("Hello Syl!", 200, 60);
       //值为end的情况
-      ctx.textAlign = 'end';
-      ctx.strokeText('Hello Syl!', 200, 100);
+      ctx.textAlign = "end";
+      ctx.strokeText("Hello Syl!", 200, 100);
       //值为left的情况
-      ctx.textAlign = 'left';
-      ctx.strokeText('Hello Syl!', 200, 140);
+      ctx.textAlign = "left";
+      ctx.strokeText("Hello Syl!", 200, 140);
       //值为right的情况
-      ctx.textAlign = 'right';
-      ctx.strokeText('Hello Syl!', 200, 180);
+      ctx.textAlign = "right";
+      ctx.strokeText("Hello Syl!", 200, 180);
     </script>
   </body>
 </html>
@@ -902,7 +902,7 @@ ctx.textAlign = 'center|end|left|right|start';
 `textBaseline` 属性设置或返回在绘制文本时的当前文本基线。语法为：
 
 ```js
-ctx.textBaseline = 'alphabetic|top|hanging|middle|ideographic|bottom';
+ctx.textBaseline = "alphabetic|top|hanging|middle|ideographic|bottom";
 ```
 
 参数说明：
@@ -937,34 +937,34 @@ ctx.textBaseline = 'alphabetic|top|hanging|middle|ideographic|bottom';
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //画一条线便于展示
-      ctx.strokeStyle = 'blue';
+      ctx.strokeStyle = "blue";
       ctx.moveTo(20, 100);
       ctx.lineTo(1314, 100);
       ctx.stroke();
       //设置字体样式
-      ctx.font = '30px Georgia';
+      ctx.font = "30px Georgia";
       //值为alphabetic的情况
-      ctx.textBaseline = 'alphabetic';
-      ctx.fillText('Hello Syl!', 20, 100);
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText("Hello Syl!", 20, 100);
       //值为top的情况
-      ctx.textBaseline = 'top';
-      ctx.fillText('Hello Syl!', 220, 100);
+      ctx.textBaseline = "top";
+      ctx.fillText("Hello Syl!", 220, 100);
       //值为hanging的情况
-      ctx.textBaseline = 'hanging';
-      ctx.fillText('Hello Syl!', 420, 100);
+      ctx.textBaseline = "hanging";
+      ctx.fillText("Hello Syl!", 420, 100);
       //值为middle的情况
-      ctx.textBaseline = 'middle';
-      ctx.fillText('Hello Syl!', 620, 100);
+      ctx.textBaseline = "middle";
+      ctx.fillText("Hello Syl!", 620, 100);
       //值为ideographic的情况
-      ctx.textBaseline = 'ideographic';
-      ctx.fillText('Hello Syl!', 820, 100);
+      ctx.textBaseline = "ideographic";
+      ctx.fillText("Hello Syl!", 820, 100);
       //值为bottom的情况
-      ctx.textBaseline = 'bottom';
-      ctx.fillText('Hello Syl!', 1020, 100);
+      ctx.textBaseline = "bottom";
+      ctx.fillText("Hello Syl!", 1020, 100);
     </script>
   </body>
 </html>
@@ -990,7 +990,7 @@ canvas 绘制图片的基本格式为：
 //创建一个图片对象
 var image = new Image();
 //设置图片的路径
-image.src = 'xxx';
+image.src = "xxx";
 //当图片加载完成后
 image.onload = function () {
   //绘制图片
@@ -1054,13 +1054,13 @@ ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //创建一张图片
       var image = new Image();
       //设置图片的路径
-      image.src = 'a.png';
+      image.src = "a.png";
       //当图片加载完成后
       image.onload = function () {
         //输出5张照片
@@ -1096,13 +1096,13 @@ ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //创建一张图片
       var image = new Image();
       //设置图片的路径
-      image.src = 'a.png';
+      image.src = "a.png";
       //当图片加载完成后
       image.onload = function () {
         //绘制图片
@@ -1135,13 +1135,13 @@ ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 
     <script type="text/javascript">
       //获取canvas元素
-      var myCanvas = document.getElementById('mycanvas');
+      var myCanvas = document.getElementById("mycanvas");
       //获取Context上下文
-      var ctx = myCanvas.getContext('2d');
+      var ctx = myCanvas.getContext("2d");
       //创建一张图片
       var image = new Image();
       //设置图片的路径
-      image.src = 'a.png';
+      image.src = "a.png";
       //当图片加载完成后
       image.onload = function () {
         //绘制图片
