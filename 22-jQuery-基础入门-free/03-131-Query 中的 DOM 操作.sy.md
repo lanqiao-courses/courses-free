@@ -66,7 +66,7 @@ enable_checker: true
 （1）查找元素节点
 
 ```js
-var $li = $('ol li:eq(0)'); //获取<ol>里第一个<li>节点
+var $li = $("ol li:eq(0)"); //获取<ol>里第一个<li>节点
 var li_txt = $li.text(); //获取第一个<li>元素节点的文本内容
 alert(li_txt); //打印文本内容
 ```
@@ -76,8 +76,8 @@ alert(li_txt); //打印文本内容
 利用 jQuery 选择器查找到需要的元素之后，就可以使用 `attr()` 方法来获取它的各种属性的值。attr() 方法的参数可以是一个，也可以是两个。当参数是一个时，则是要查询的属性的名字，比如：
 
 ```js
-var $para = $('p'); //获取<p>节点
-var p_txt = $para.attr('title'); //获取<p>元素节点属性title
+var $para = $("p"); //获取<p>节点
+var p_txt = $para.attr("title"); //获取<p>元素节点属性title
 alert(p_txt); //打印title属性值
 ```
 
@@ -90,7 +90,7 @@ alert(p_txt); //打印title属性值
 创建元素节点可以用 `$(html)` 函数。\$(html) 方法会根据传入的 HTML 标记字符串，创建一个 DOM 对象，并将这个 DOM 对象包装成一个 jQuery 对象后返回。首先创建一个 li 元素如下所示：
 
 ```js
-var $li = $('<li></li>'); //创建一个<li>元素
+var $li = $("<li></li>"); //创建一个<li>元素
 ```
 
 当然上面只是创建出来了，要使用的话，还需要使用 `append()` 等方法将该元素插入文档中（下面会讲插入节点）。
@@ -100,7 +100,7 @@ var $li = $('<li></li>'); //创建一个<li>元素
 创建文本节点就是在创建元素节点时直接把文本内容写出来，然后使用 `append()` 等方法将它们添加到文档中就可以了，例如：
 
 ```js
-var $li = $('<li>syl</li>'); //创建一个<li>元素,包括元素节点和文本节点，“syl”就是创建的文本节点
+var $li = $("<li>syl</li>"); //创建一个<li>元素,包括元素节点和文本节点，“syl”就是创建的文本节点
 ```
 
 （3）创建属性节点
@@ -129,8 +129,8 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        var li_obj = $('<li>黄色</li>');
-        $('ul').append(li_obj);
+        var li_obj = $("<li>黄色</li>");
+        $("ul").append(li_obj);
       });
     </script>
   </body>
@@ -187,7 +187,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('<li>yellow</li>').appendTo('ul');
+        $("<li>yellow</li>").appendTo("ul");
       });
     </script>
   </body>
@@ -217,8 +217,8 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        var $li = $('ul li:eq(1)'); //获取<ul>节点中的第2个<li>元素节点
-        var $h1 = $('h1'); //获取<h1>节点
+        var $li = $("ul li:eq(1)"); //获取<ul>节点中的第2个<li>元素节点
+        var $h1 = $("h1"); //获取<h1>节点
         $h1.insertBefore($li); //移动节点
       });
     </script>
@@ -258,11 +258,11 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li').click(function () {
+        $("ul li").click(function () {
           alert($(this).html());
         });
-        var $li = $('ul li:eq(1)').detach(); //删除元素
-        $li.appendTo('ul'); //重新追加此元素,发现它之前绑定的事件还在,如果使用remove()方法删除元素的话,那么它之前绑定的事件将失效
+        var $li = $("ul li:eq(1)").detach(); //删除元素
+        $li.appendTo("ul"); //重新追加此元素,发现它之前绑定的事件还在,如果使用remove()方法删除元素的话,那么它之前绑定的事件将失效
       });
     </script>
   </body>
@@ -295,7 +295,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li:eq(1)').empty(); //获取第二个<li>元素节点后,清除此元素里的内容,注意是元素里
+        $("ul li:eq(1)").empty(); //获取第二个<li>元素节点后,清除此元素里的内容,注意是元素里
       });
     </script>
   </body>
@@ -328,8 +328,8 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        var $li = $('ul li:eq(1)').remove(); //获取<ul>节点中的第2个<li>元素节点后,将它从网页中删除
-        $li.appendTo('ul'); //把刚才删除的节点又重新添加到 <ul> 元素里
+        var $li = $("ul li:eq(1)").remove(); //获取<ul>节点中的第2个<li>元素节点后,将它从网页中删除
+        $li.appendTo("ul"); //把刚才删除的节点又重新添加到 <ul> 元素里
 
         //可以直接使用 appendTo() 方法来简化上面的代码
         //appendTo() 方法也可以用来移动元素,移动元素时首先将文档上删除此元素,然后讲该元素插入得到文档中的指定节点
@@ -364,7 +364,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li').remove('li[title!=syl]'); //将<li>元素中属性title不等于'syl'的<li>元素删除
+        $("ul li").remove("li[title!=syl]"); //将<li>元素中属性title不等于'syl'的<li>元素删除
       });
     </script>
   </body>
@@ -399,8 +399,8 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li').on('click', function () {
-          $(this).clone().appendTo('ul');
+        $("ul li").on("click", function () {
+          $(this).clone().appendTo("ul");
         });
       });
     </script>
@@ -436,7 +436,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     <p>shiyanlou</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').replaceWith('<p>SHIYANLOU</p>');
+        $("p").replaceWith("<p>SHIYANLOU</p>");
         //注释代码与上面的代码作用一样
         // $("<p>SHIYANLOU</p>").replaceAll("p");
       });
@@ -474,7 +474,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     <p>shiyanlou</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').wrap("<div style='border:1px red solid;'></div>");
+        $("p").wrap("<div style='border:1px red solid;'></div>");
       });
     </script>
   </body>
@@ -506,7 +506,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     <p>shiyanlou</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').wrapAll("<div style='border:1px red solid;'></div>");
+        $("p").wrapAll("<div style='border:1px red solid;'></div>");
       });
     </script>
   </body>
@@ -536,7 +536,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     <p>shiyanlou</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').wrapInner("<div style='border:1px red solid;'></div>");
+        $("p").wrapInner("<div style='border:1px red solid;'></div>");
       });
     </script>
   </body>
@@ -572,8 +572,8 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     <div></div>
     <script type="text/javascript">
       $(document).ready(function () {
-        var p_class = $('p').attr('class');
-        $('div').append(p_class);
+        var p_class = $("p").attr("class");
+        $("div").append(p_class);
       });
     </script>
   </body>
@@ -608,7 +608,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
     <div>shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').attr('class', 'demo');
+        $("div").attr("class", "demo");
       });
     </script>
   </body>
@@ -622,7 +622,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 如果需要一次性为同一个元素设置多个元素，可以使用下面的代码来实现：
 
 ```js
-$('div').attr({ class: 'demo', name: 'test' }); //将一个 “名/值” 形式的对象设置为匹配元素的属性
+$("div").attr({ class: "demo", name: "test" }); //将一个 “名/值” 形式的对象设置为匹配元素的属性
 ```
 
 （3）删除元素属性
@@ -649,7 +649,7 @@ $('div').attr({ class: 'demo', name: 'test' }); //将一个 “名/值” 形式
     <div class="demo">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').removeAttr('class');
+        $("div").removeAttr("class");
       });
     </script>
   </body>
@@ -736,7 +736,7 @@ HTML 代码：
     <div class="demo">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').addClass('another');
+        $("div").addClass("another");
       });
     </script>
   </body>
@@ -781,7 +781,7 @@ HTML 代码：
     <div class="demo another">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').removeClass('another');
+        $("div").removeClass("another");
       });
     </script>
   </body>
@@ -795,13 +795,13 @@ HTML 代码：
 注：如果要删除多个 class 值，我们可以以空格的方式删除多个 class 名，比如：
 
 ```js
-$('div').removeClass('another demo'); //删除 another 类和 demo 类
+$("div").removeClass("another demo"); //删除 another 类和 demo 类
 ```
 
 如果 `removeClass()` 方法不带参数，就会将 class 的值全部删除，比如：
 
 ```js
-$('div').removeClass(); //删除<div>元素的所有class
+$("div").removeClass(); //删除<div>元素的所有class
 ```
 
 （4）切换样式
@@ -828,8 +828,8 @@ $('div').removeClass(); //删除<div>元素的所有class
     <button class="btn1">切换段落的 "main" 类</button>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('button').click(function () {
-          $('p').toggleClass('main');
+        $("button").click(function () {
+          $("p").toggleClass("main");
         });
       });
     </script>
@@ -846,7 +846,7 @@ $('div').removeClass(); //删除<div>元素的所有class
 `.hasClass()` 可以用来判断元素中是否含有某个 class，如果有则返回 true，否则返回 false。比如：
 
 ```js
-$('p').hasClass('another');
+$("p").hasClass("another");
 ```
 
 想要查看更多关于样式操作的实例，可以访问 [jQuery 中文官网 class 属性](https://www.jquery123.com/category/manipulation/class-attribute/)。
@@ -871,7 +871,7 @@ $('p').hasClass('another');
     <div><p>实验楼</p></div>
     <script type="text/javascript">
       $(document).ready(function () {
-        var div_html = $('div').html(); //获取<div>元素的HTML代码
+        var div_html = $("div").html(); //获取<div>元素的HTML代码
         alert(div_html); //打印<div>元素的HTML代码
       });
     </script>
@@ -897,7 +897,7 @@ $('p').hasClass('another');
     <div></div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').html('<span>shiyanlou</span>');
+        $("div").html("<span>shiyanlou</span>");
       });
     </script>
   </body>
@@ -926,7 +926,7 @@ $('p').hasClass('another');
     <div>实验楼</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        var p_text = $('div').text();
+        var p_text = $("div").text();
         alert(p_text);
       });
     </script>
@@ -952,7 +952,7 @@ $('p').hasClass('another');
     <div>实验楼</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('div').text('shiyanlou');
+        $("div").text("shiyanlou");
       });
     </script>
   </body>
@@ -981,7 +981,7 @@ $('p').hasClass('another');
     <input type="text" value="" />
     <script type="text/javascript">
       $(document).ready(function () {
-        $('input').val('shiyanlou');
+        $("input").val("shiyanlou");
       });
     </script>
   </body>
@@ -1020,7 +1020,7 @@ $('p').hasClass('another');
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        var ul_chlildList = $('ul').children();
+        var ul_chlildList = $("ul").children();
         for (var i = 0, len = ul_chlildList.length; i < len; i++) {
           alert(ul_chlildList[i].innerHTML);
         }
@@ -1057,7 +1057,7 @@ $('p').hasClass('another');
     <p>SHIYANLOU</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        var div_next = $('div').next();
+        var div_next = $("div").next();
         alert(div_next.text());
       });
     </script>
@@ -1092,7 +1092,7 @@ $('p').hasClass('another');
     <p>SHIYANLOU</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        var p_prev = $('p').prev();
+        var p_prev = $("p").prev();
         alert(p_prev.text());
       });
     </script>
@@ -1128,7 +1128,7 @@ $('p').hasClass('another');
     <div>SHIYANLOU</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').siblings().css('background-color', 'red');
+        $("p").siblings().css("background-color", "red");
       });
     </script>
   </body>
@@ -1164,8 +1164,8 @@ $('p').hasClass('another');
       <p>SHIYANLOU-P</p>
     </div>
     <script type="text/javascript">
-      var p_pa = $('p').parent();
-      alert(p_pa.attr('class'));
+      var p_pa = $("p").parent();
+      alert(p_pa.attr("class"));
     </script>
   </body>
 </html>
@@ -1217,7 +1217,7 @@ CSS-DOM 技术简单来说就是读取和设置 style 对象的各种属性。
   <body>
     <div>shiyanlou</div>
     <script type="text/javascript">
-      alert($('div').css('background-color'));
+      alert($("div").css("background-color"));
     </script>
   </body>
 </html>
@@ -1240,7 +1240,7 @@ CSS-DOM 技术简单来说就是读取和设置 style 对象的各种属性。
   <body>
     <div>shiyanlou</div>
     <script type="text/javascript">
-      $('div').css({ border: '1px solid red', height: '100px' });
+      $("div").css({ border: "1px solid red", height: "100px" });
     </script>
   </body>
 </html>
@@ -1253,7 +1253,7 @@ CSS-DOM 技术简单来说就是读取和设置 style 对象的各种属性。
 对于透明度的设置，可以直接使用 opacity 属性，jQuery 已经处理好了兼容性的问题，比如：
 
 ```js
-$('p').css('opacity', '0.5');
+$("p").css("opacity", "0.5");
 ```
 
 （2）`.height()`、`.width()`
@@ -1283,7 +1283,7 @@ $('p').css('opacity', '0.5');
   <body>
     <div class="demo">shiyanlou</div>
     <script type="text/javascript">
-      alert($('div').height() + ' && ' + $('div').width());
+      alert($("div").height() + " && " + $("div").width());
     </script>
   </body>
 </html>
@@ -1303,7 +1303,7 @@ $("p").height(10rem);//设置<p>元素的高度值为10rem
 还可以通过 css 方法来获取高度值：
 
 ```js
-$(element).css('height');
+$(element).css("height");
 ```
 
 两者的区别是：`css()` 方法获取的高度值与样式的设置有关，可能会得到 “auto” ，也可能得到 “10px” 之类的字符串，而 `height()` 方法获取的高度值则是元素在页面中的实际高度，与样式的设置无关，而且不带单位。
@@ -1315,7 +1315,7 @@ $(element).css('height');
 - `offset()` 方法，在匹配的元素集合中，获取的第一个元素的当前坐标，或设置每一个元素的坐标，坐标相对于文档。这个方法不接受任何参数。`.offset()` 方法允许我们检索一个元素相对于文档（document）的当前位置。和 `.position()` 的差别在于：`.position()` 是相对于相对于父级元素的位移。当通过全局操作（特别是通过拖拽操作）将一个新的元素放置到另一个已经存在的元素的上面时，若要取得这个新的元素的位置，那么使用 `.offset()` 更合适。`.offset()` 返回一个包含 top 和 left 属性的对象 。比如：
 
 ```js
-var p_offset = $('p').offset(); //获取<p>元素的offset()
+var p_offset = $("p").offset(); //获取<p>元素的offset()
 var p_offsetLeft = p_offset.left; //获取左偏移
 var p_offsetTop = p_offset.top; //获取右偏移
 ```
@@ -1323,7 +1323,7 @@ var p_offsetTop = p_offset.top; //获取右偏移
 - `position()` 方法，获取匹配元素中第一个元素的当前坐标，相对于 offset parent 的坐标。(offset parent 指离该元素最近的而且被定位过的祖先元素 ) `.position()` 方法可以取得元素相对于父元素的偏移位置。与 `.offset()` 不同, `.offset()` 是获得该元素相对于 documet 的当前坐标 当把一个新元素放在同一个容器里面另一个元素附近时，用 `.position()` 更好用。`.position()`返回一个包含 top 和 left 属性的对象。
 
 ```js
-var position = $('p').position(); //获取<p>元素的position()
+var position = $("p").position(); //获取<p>元素的position()
 var left = position.left; //获取左偏移
 var top = position.top; //获取右偏移
 ```
@@ -1331,11 +1331,11 @@ var top = position.top; //获取右偏移
 - `scrollTop()` 方法和 `scrollLeft()` 方法，这两个方法的作用是分别获取元素的滚动条距顶端的距离和距左侧的距离。另外可以为这两个方法指定一个参数，控制元素的滚动条滚动到指定位置。比如：
 
 ```js
-var $p = $('p');
+var $p = $("p");
 var scrollTop = $p.scrollTop(); //获取元素的滚动条距顶端的距离
 var scrollLeft = $p.scrollLeft(); //获取元素的滚动条距左侧的距离
-$('textarea').scrollTop(300); //元素的垂直滚动条滚动到指定的位置
-$('textarea').scrollLeft(300); //元素的横向滚动条滚动到指定的位置
+$("textarea").scrollTop(300); //元素的垂直滚动条滚动到指定的位置
+$("textarea").scrollLeft(300); //元素的横向滚动条滚动到指定的位置
 ```
 
 想要了解更多关于 css 属性的操作可以访问 [jQuery 中文官网 CSS 属性](https://www.jquery123.com/category/manipulation/style-properties/)。
