@@ -62,9 +62,9 @@ localStorage.setItem(key, value);
 
 ```js
 //方法1向本地存储中添加一个名为name,值为"syl"的key-value对象
-localStorage.setItem('name', 'syl');
+localStorage.setItem("name", "syl");
 //方法2
-localStorage['price'] = 1314;
+localStorage["price"] = 1314;
 //方法3
 localStorage.amount = 520;
 ```
@@ -126,7 +126,7 @@ localStorage.removeItem(key);
       //将当前时间作为键名，textarea的value值（也就是用户输入的值）的值作为键值
       localStorage.setItem(time, data);
       //显示留言
-      showMsg('msg');
+      showMsg("msg");
     }
     //showMsg是一个显示留言的函数
     function showMsg(id) {
@@ -139,26 +139,26 @@ localStorage.removeItem(key);
         //获取value值
         var value = localStorage.getItem(key);
         //显示数据
-        result += '<tr><td>' + value + '</td><td>' + key + '</td></tr>';
+        result += "<tr><td>" + value + "</td><td>" + key + "</td></tr>";
       }
-      result += '</table>';
+      result += "</table>";
       var target = document.getElementById(id);
       target.innerHTML = result;
     }
     //显示留言
-    showMsg('msg');
+    showMsg("msg");
     //clearStorage是一个清空留言的函数
     function clearStorage() {
       //清空数据
       localStorage.clear();
       //显示留言
-      showMsg('msg');
+      showMsg("msg");
     }
     //clearsingleStorage是一个删除单个数据的函数
     function clearsingleStorage() {
       localStorage.removeItem(localStorage.key(localStorage.length - 1));
       //显示留言
-      showMsg('msg');
+      showMsg("msg");
     }
   </script>
 </body>
@@ -188,7 +188,7 @@ localStorage.removeItem(key);
     } else {
       sessionStorage.pagecount = 1;
     }
-    document.write('你刷新了本页面 ' + sessionStorage.pagecount + ' 次');
+    document.write("你刷新了本页面 " + sessionStorage.pagecount + " 次");
   </script>
 
   <p>刷新页面看看效果。</p>
@@ -342,12 +342,12 @@ var state = instanceOfFileReader.readyState;
     <title>文件读取</title>
     <script type="text/javascript">
       //检查浏览器是否支持FileReader
-      if (typeof FileReader == 'undified') {
-        alert('您老的浏览器不行了！');
+      if (typeof FileReader == "undified") {
+        alert("您老的浏览器不行了！");
       }
 
       function showDataByURL() {
-        var resultFile = document.getElementById('fileDemo').files[0];
+        var resultFile = document.getElementById("fileDemo").files[0];
         if (resultFile) {
           //创建一个 FileReader 实例
           var reader = new FileReader();
@@ -357,20 +357,20 @@ var state = instanceOfFileReader.readyState;
           /*读取完毕  预览 */
           reader.onload = function (e) {
             var urlData = this.result;
-            document.getElementById('result').innerHTML +=
+            document.getElementById("result").innerHTML +=
               "<img src='" + urlData + "' alt='" + resultFile.name + "' />";
           };
         }
       }
 
       function showDataByText() {
-        var resultFile = document.getElementById('fileDemo').files[0];
+        var resultFile = document.getElementById("fileDemo").files[0];
         if (resultFile) {
           var reader = new FileReader();
-          reader.readAsText(resultFile, 'gb2312');
+          reader.readAsText(resultFile, "gb2312");
           reader.onload = function (e) {
             var urlData = this.result;
-            document.getElementById('result').innerHTML += urlData;
+            document.getElementById("result").innerHTML += urlData;
           };
         }
       }

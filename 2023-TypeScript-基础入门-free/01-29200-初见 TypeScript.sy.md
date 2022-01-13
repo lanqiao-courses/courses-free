@@ -69,8 +69,8 @@ cnpm install -g typescript
 新建一个文件`index.ts`，输入以下内容：
 
 ```ts
-console.log('hello world');
-var a: string = '2'; //这是ts写法，暂时不需要掌握，后续会讲到
+console.log("hello world");
+var a: string = "2"; //这是ts写法，暂时不需要掌握，后续会讲到
 ```
 
 在终端输入`tsc index.ts`编译文件，编译成功则会生成一个同名的 js 文件。

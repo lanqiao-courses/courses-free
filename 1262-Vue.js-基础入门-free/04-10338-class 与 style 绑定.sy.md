@@ -51,7 +51,7 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
           isActive: true,
         },
@@ -101,7 +101,7 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
           isActive: true,
           isRed: true,
@@ -148,10 +148,10 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-          activeClass: 'active',
-          bgColorClass: 'red-bg',
+          activeClass: "active",
+          bgColorClass: "red-bg",
         },
       });
     </script>
@@ -190,10 +190,10 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-          size: '26px',
-          bgColor: 'pink',
+          size: "26px",
+          bgColor: "pink",
         },
       });
     </script>
@@ -224,11 +224,11 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
           styleObject: {
-            fontSize: '26px',
-            backgroundColor: 'pink',
+            fontSize: "26px",
+            backgroundColor: "pink",
           },
         },
       });
@@ -258,17 +258,17 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
           //样式一
           styleObject1: {
-            fontSize: '26px',
-            backgroundColor: 'pink',
+            fontSize: "26px",
+            backgroundColor: "pink",
           },
           //样式二
           styleObject2: {
-            marginTop: '200px',
-            textAlign: 'center',
+            marginTop: "200px",
+            textAlign: "center",
           },
         },
       });
@@ -321,7 +321,7 @@ enable_checker: true
     </div>
     <script>
       var app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
           fontSize: 20,
           isActive: true,

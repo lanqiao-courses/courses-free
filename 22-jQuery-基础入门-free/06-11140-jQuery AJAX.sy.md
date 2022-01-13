@@ -63,7 +63,7 @@ var xhr = new XMLHttpRequest();
 IE5 和 IE6 的语法：
 
 ```js
-var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+var xhr = new ActiveXObject("Microsoft.XMLHTTP");
 ```
 
 ### 2.4 发起 XMLHttpRequest 请求
@@ -98,23 +98,23 @@ $ npm start # 启动后端程序
 我们先来看一个简单的 GET 请求:
 
 ```js
-xhr.open('GET', 'index.html', true);
+xhr.open("GET", "index.html", true);
 xhr.send();
 ```
 
 xhr 是我们之前创建的 XMLHttpRequest 对象的实例，通过调用 XMLHttpRequest 对象的 open 和 send 方法，就实现了一个简单的向路径 `index.html` 发起的 GET 请求，异步处理。因为 GET 请求的 header 中是没有参数的，所以 send() 里的值为 null。如果想要加上参数则需要在请求的 url 后添加，如：
 
 ```js
-xhr.open('GET', 'http://helloworld.com?id=1', 'true');
+xhr.open("GET", "http://helloworld.com?id=1", "true");
 xhr.send();
 ```
 
 我们再来看一个 post 请求：
 
 ```js
-xhr.open('POST', 'index.php', true);
-xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-xhr.send('name=syl&id=2');
+xhr.open("POST", "index.php", true);
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhr.send("name=syl&id=2");
 ```
 
 如果我们想像 HTML 表单那样 POST 数据，则需要使用 setRequestHeader() 来添加 HTTP 头，然后在 send 中规定要发送的数据。
@@ -124,7 +124,7 @@ xhr.send('name=syl&id=2');
 我们现在只是发送了请求，一个完整的 AJAX 过程还要包括服务端返回信息，这个过程的时间就是我们无法估计的了，谁都没法确定服务端会什么时候返回信息，所以如果 async 设为 true，当发送了 AJAX 请求后，js 无需等待服务端的响应，而是会去处理其它的脚本，等到服务端响应就绪的时候，js 会返回对 AJAX 中的剩余部分作相应处理，这个相应处理需要通过 `onreadystatechange` 来实现，我们会在下一部分中介绍。如果 async 设为 false，当然，一般不推荐使用 async = false，如果你这么使用了，那么请不要编写 `onreadystatechange` 函数，否则 js 会挂起在这个函数的地方，等待服务端响应，如果服务端瘫痪了，那么你的脚本就会无法运行。所以如果使用了 async = false，把处理代码放到 send() 后面即可。例如：
 
 ```js
-xhr.open('GET', 'index.text', false);
+xhr.open("GET", "index.text", false);
 xhr.send();
 console.log(xhr.responseText);
 ```
@@ -188,11 +188,11 @@ xhr.onreadystatechange = function () {
         var xhr = null;
 
         //创建对象
-        if (window.ActiveXObject) xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        if (window.ActiveXObject) xhr = new ActiveXObject("Microsoft.XMLHTTP");
         else if (window.XMLHttpRequest) xhr = new XMLHttpRequest();
 
         //发送请求
-        xhr.open('GET', 'https://042bc5dd9bf0.simplelab.cn/xhrtest', true);
+        xhr.open("GET", "https://042bc5dd9bf0.simplelab.cn/xhrtest", true);
         //上面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
         //xhr.open("GET","需要将 web 服务中 url 粘贴到这里/xhrtest",true);
         xhr.send();
@@ -249,7 +249,7 @@ load(url, [data], [callback]);
     <div id="result"></div>
     <script>
       $(document).ready(function () {
-        $('#result').load('https://042bc5dd9bf0.simplelab.cn/load.html');
+        $("#result").load("https://042bc5dd9bf0.simplelab.cn/load.html");
         //上面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
         //$("#result").load("需要将 web 服务中 url 粘贴到这里/load.html");
       });
@@ -276,8 +276,8 @@ load(url, [data], [callback]);
       $(document).ready(function () {
         //下面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
         //"需要将 web 服务中 url 粘贴到这里/load.html"
-        $('#result').load(
-          'https://042bc5dd9bf0.simplelab.cn/load.html',
+        $("#result").load(
+          "https://042bc5dd9bf0.simplelab.cn/load.html",
           function (response, status, xhr) {
             alert(status);
           }
@@ -311,7 +311,7 @@ get() 方法是 ajax 方法的简写形式，我们还没有介绍 ajax 方法�
 
 ```js
 $.ajax({
-  type: 'GET',
+  type: "GET",
   url: url,
   data: data,
   success: success,
@@ -333,10 +333,10 @@ $.ajax({
     <button id="btn">click me!</button>
     <script>
       $(document).ready(function () {
-        $('#btn').click(function () {
+        $("#btn").click(function () {
           //下面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
           //"需要将 web 服务中 url 粘贴到这里/gettest"
-          $.get('https://042bc5dd9bf0.simplelab.cn/gettest', function (result) {
+          $.get("https://042bc5dd9bf0.simplelab.cn/gettest", function (result) {
             alert(result);
           });
         });
@@ -375,7 +375,7 @@ post() 方法是 ajax 方法的简写形式，我们还没有介绍 ajax 方法�
 
 ```js
 $.ajax({
-  type: 'POST',
+  type: "POST",
   url: url,
   data: data,
   success: success,
@@ -397,18 +397,20 @@ $.ajax({
     <button id="btn">click me</button>
     <script>
       var data = {
-        name: 'syl',
+        name: "syl",
         id: 1,
       };
       $(document).ready(function () {
-        $('#btn').click(function () {
+        $("#btn").click(function () {
           //下面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
           //"需要将 web 服务中 url 粘贴到这里/posttest"
-          $.post('https://042bc5dd9bf0.simplelab.cn/posttest', data, function (
-            result
-          ) {
-            alert(result);
-          });
+          $.post(
+            "https://042bc5dd9bf0.simplelab.cn/posttest",
+            data,
+            function (result) {
+              alert(result);
+            }
+          );
         });
       });
     </script>
@@ -420,7 +422,7 @@ $.ajax({
 
 ```js
 var data = {
-  name: 'syl',
+  name: "syl",
   id: 1,
 };
 ```
@@ -444,15 +446,15 @@ var data = {
     <div id="result"></div>
     <script>
       var data = {
-        name: 'syl',
+        name: "syl",
         id: 1,
       };
       $(document).ready(function () {
-        $('#btn').click(function () {
+        $("#btn").click(function () {
           //下面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
           //"需要将 web 服务中 url 粘贴到这里/posttest"
-          $('#result').load(
-            'https://042bc5dd9bf0.simplelab.cn/posttest',
+          $("#result").load(
+            "https://042bc5dd9bf0.simplelab.cn/posttest",
             data,
             function (result) {
               alert(result);
@@ -486,9 +488,9 @@ jQuery.getScript(url, success(response, status));
 
 ```js
 $.ajax({
-  type: 'GET',
+  type: "GET",
   url: url,
-  dataType: 'script',
+  dataType: "script",
   success: success,
 });
 ```
@@ -507,8 +509,8 @@ $.ajax({
     <button id="btn">click me</button>
     <script>
       $(document).ready(function () {
-        $('#btn').click(function () {
-          $.getScript('https://042bc5dd9bf0.simplelab.cn/getscripttest');
+        $("#btn").click(function () {
+          $.getScript("https://042bc5dd9bf0.simplelab.cn/getscripttest");
           //上面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
           //"需要将 web 服务中 url 粘贴到这里/getscripttest"
         });
@@ -521,7 +523,7 @@ $.ajax({
 点击按钮，可以看到出现了一个弹框，这个逻辑是我们请求得到的 js 文件中写的。
 
 ```js
-alert('This file was loaded dynamically by method getScript()!');
+alert("This file was loaded dynamically by method getScript()!");
 ```
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid920932-20190517-1558077439662)
@@ -544,7 +546,7 @@ jQuery.getJSON(url, data, success(data, status, xhr));
 
 ```js
 $.ajax({
-  type: 'GET',
+  type: "GET",
   url: url,
   data: data,
   success: callback,
@@ -568,29 +570,30 @@ $.ajax({
     <button id="btn">click me</button>
     <script>
       $(document).ready(function () {
-        $('#btn').click(function () {
+        $("#btn").click(function () {
           //下面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
           //"需要将 web 服务中 url 粘贴到这里/getjsontest"
-          $.getJSON('https://042bc5dd9bf0.simplelab.cn/getjsontest', function (
-            data
-          ) {
-            alert(
-              typeof data +
-                '\n' +
-                data[0].id +
-                ' ' +
-                data[0].name +
-                '\n' +
-                data[1].id +
-                ' ' +
-                data[1].name +
-                '\n' +
-                data[2].id +
-                ' ' +
-                data[2].name +
-                '\n'
-            );
-          });
+          $.getJSON(
+            "https://042bc5dd9bf0.simplelab.cn/getjsontest",
+            function (data) {
+              alert(
+                typeof data +
+                  "\n" +
+                  data[0].id +
+                  " " +
+                  data[0].name +
+                  "\n" +
+                  data[1].id +
+                  " " +
+                  data[1].name +
+                  "\n" +
+                  data[2].id +
+                  " " +
+                  data[2].name +
+                  "\n"
+              );
+            }
+          );
         });
       });
     </script>
@@ -647,21 +650,21 @@ options 是一个 `{}`,里面包含了 ajax 请求的参数，我们之前介绍
     <button id="btn">guess</button>
     <script>
       $(document).ready(function () {
-        $('#btn').click(function () {
+        $("#btn").click(function () {
           //下面面是在实验楼环境里运行过的 url，你需要根据注意里的步骤，将后端运行起来后，把web 服务页面中的 url 替换到对应位置，下面一行注释给出了需要替换的位置。
           //"需要将 web 服务中 url 粘贴到这里/ajaxtest"
           $.ajax({
-            type: 'POST',
-            url: 'https://042bc5dd9bf0.simplelab.cn/ajaxtest',
+            type: "POST",
+            url: "https://042bc5dd9bf0.simplelab.cn/ajaxtest",
             data: {
-              value: $('#content').val(),
+              value: $("#content").val(),
             },
-            dataType: 'text',
+            dataType: "text",
             beforeSend: function (xhr) {
               var reg = /^((?!0)\d{1,2}|100)$/;
-              if (!reg.test(parseInt($('#content').val()))) {
+              if (!reg.test(parseInt($("#content").val()))) {
                 xhr.abort();
-                alert('请输入 0 - 100 的正整数！');
+                alert("请输入 0 - 100 的正整数！");
               }
             },
             success: function (result) {
@@ -681,9 +684,9 @@ options 是一个 `{}`,里面包含了 ajax 请求的参数，我们之前介绍
 这是一个猜数字游戏，在输入框中输入数字，点击按钮，发送 ajax 请求，由后端处理后返回结果，下面给出后端处理部分的逻辑代码：
 
 ```js
-router.post('/ajaxtest', function (req, res, next) {
-  if (req.body.value == 23) res.send('恭喜你，猜对了！');
-  else res.send('不是 ' + req.body.value + ' 哦，别灰心，再接再厉！');
+router.post("/ajaxtest", function (req, res, next) {
+  if (req.body.value == 23) res.send("恭喜你，猜对了！");
+  else res.send("不是 " + req.body.value + " 哦，别灰心，再接再厉！");
 });
 ```
 
@@ -709,10 +712,10 @@ router.post('/ajaxtest', function (req, res, next) {
 例如：
 
 ```js
-$('$test').ajaxStart(function () {
+$("$test").ajaxStart(function () {
   $(this).show();
 });
-$('$test').ajaxStop(function () {
+$("$test").ajaxStop(function () {
   $(this).hide();
 });
 ```
