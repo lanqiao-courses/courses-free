@@ -59,7 +59,7 @@ JavaScript 是一种脚本语言。学一种编程语言，首先就要从这种
   </head>
   <body>
     <script>
-      console.log('hello world');
+      console.log("hello world");
     </script>
   </body>
 </html>
@@ -82,7 +82,7 @@ JavaScript 是一种脚本语言。学一种编程语言，首先就要从这种
     <meta charset="UTF-8" />
     <title></title>
     <script>
-      console.log('hello world');
+      console.log("hello world");
     </script>
   </head>
   <body></body>
@@ -92,7 +92,7 @@ JavaScript 是一种脚本语言。学一种编程语言，首先就要从这种
 执行结果没有什么区别，不同的是执行顺序，简单的来说，放在前面的会先执行。此外，和 CSS 引入相类似，JavaScript 也可以通过外部引入。首先我们需要创建一个扩展名为 .js 的文件，然后在 html 页面中引入它。同样的拿上述范例来修改，我们首先创建一个叫 test.js，名字可以自己取，但是扩展名一定要是 .js，只有这样才能够识别包含 JavaScript 代码的文件，然后在里面写上我们的 JavaScript 代码：
 
 ```javascript
-console.log('hello world');
+console.log("hello world");
 ```
 
 在 html 文件中写上如下代码：
@@ -125,7 +125,7 @@ console.log('hello world');
 通过 var 关键字来声明变量，比如：
 
 ```javascript
-var name = '实验楼';
+var name = "实验楼";
 ```
 
 上述代码声明了一个名为 name 的变量，并赋值为“实验楼”。注意此处的等于符号（=）为赋值符号，不是我们传统意义上理解的等号。
@@ -156,8 +156,8 @@ var x2 = 3.1415926;
 - String：存储字符（比如 "shiyanlou"）的变量，字符串可以是引号中的任意文本，你可以使用单引号或双引号，也可以在字符串中使用引号，只要不匹配包围字符串的引号即可：
 
 ```javascript
-var carname = 'shiyanlou';
-var carname = 'shiyanlou';
+var carname = "shiyanlou";
+var carname = "shiyanlou";
 var answer = "I Love 'shiyanlou'";
 var answer = 'I Love "shiyanlou"';
 ```
@@ -166,14 +166,14 @@ var answer = 'I Love "shiyanlou"';
 - Array：数组是一个单个对象，其中包含很多值，方括号括起来，并用逗号分隔。后续我们将会对数值进行详细的讲解，此处看两个简单的数值例子：
 
 ```javascript
-var myNameArray = ['Tom', 'Bob', 'Jim'];
+var myNameArray = ["Tom", "Bob", "Jim"];
 var myNumberArray = [10, 15, 20];
 ```
 
 - Object：对象类型。同样的我们会在后续的课程中详细讲解什么是对象，此处先看一个简单的例子：
 
 ```javascript
-var student = { name: 'Tom', age: 18 };
+var student = { name: "Tom", age: 18 };
 ```
 
 #### 动态类型
@@ -181,7 +181,7 @@ var student = { name: 'Tom', age: 18 };
 JavaScript 是一种“动态类型语言”，这意味着不同于其他一些语言（如 C、Java），你不需要指定变量将包含什么数据类型（例如 number 或 string），全部用 `var` 关键字声明就是了。比如如果你声明一个变量并给它一个带引号的值，浏览器就会知道它是一个字符串：
 
 ```javascript
-var myString = 'Hello';
+var myString = "Hello";
 ```
 
 值得注意的就是引号中如果是一个数字，它依然是 string 类型的。我们可以在控制台中通过 `typeof` 函数，来查看我们声明的变量是什么类型的。
@@ -194,7 +194,7 @@ var myString = 'Hello';
 
 ```javascript
 // 这是一个变量
-var name = 'zhangsan';
+var name = "zhangsan";
 ```
 
 多行注释：用来注释多条代码。多行注释快捷键：`Ctrl + Shift + /`。
@@ -279,7 +279,7 @@ var myarray = [1, 2, 3, 4, 5]; // 直接输入一个数组（称“字面量数�
 注：我们可以用上述两种方法创建数组，myarray 指的是定义的数组名，可以自己取，数组储存的数据可以是任何类型（数字，字符，布尔值等）。每一个值都有一个索引值，从 0 开始。比如：
 
 ```javascript
-var color = ['red', 'green', 'blue', 'yellow'];
+var color = ["red", "green", "blue", "yellow"];
 color[0]; // returns "red"
 color[1]; // returns "green"
 color[2]; // returns "blue"
@@ -293,8 +293,8 @@ color[4]; // returns undefined
 
 ```javascript
 var student = [
-  ['张三', '男', '18'],
-  ['李四', '女', '20'],
+  ["张三", "男", "18"],
+  ["李四", "女", "20"],
 ];
 student[0][2]; // returns "18"
 ```
@@ -306,8 +306,8 @@ student[0][2]; // returns "18"
 修改数组中的元素内容也很简单，直接为它提供新值就可以了。比如：
 
 ```javascript
-var color = ['red', 'green', 'blue', 'yellow'];
-color[0] = 'black';
+var color = ["red", "green", "blue", "yellow"];
+color[0] = "black";
 color; // returns ["black", "green", "blue", "yellow"]
 ```
 
@@ -316,7 +316,7 @@ color; // returns ["black", "green", "blue", "yellow"]
 同样的我们使用 `length` 来获取数组的长度。比如：
 
 ```javascript
-var color = ['red', 'green', 'blue', 'yellow'];
+var color = ["red", "green", "blue", "yellow"];
 color.length; // returns 4
 ```
 
@@ -325,15 +325,15 @@ color.length; // returns 4
 通过 `split()` 方法，将字符串转换为数组。比如：
 
 ```javascript
-'1:2:3:4'.split(':'); // returns ["1", "2", "3", "4"]
-'|a|b|c'.split('|'); // returns ["", "a", "b", "c"]
+"1:2:3:4".split(":"); // returns ["1", "2", "3", "4"]
+"|a|b|c".split("|"); // returns ["", "a", "b", "c"]
 ```
 
 相反的我们通过 `join()` 方法将数组转换为字符串。比如：
 
 ```javascript
-['1', '2', '3', '4'].join(':'); // returns "1:2:3:4"
-['', 'a', 'b', 'c'].join('|'); // returns "|a|b|c"
+["1", "2", "3", "4"].join(":"); // returns "1:2:3:4"
+["", "a", "b", "c"].join("|"); // returns "|a|b|c"
 ```
 
 注：我们同样可以使用 `toString()` 方法将数组转换为字符串，但是 `join()` 方法可以指定不同的分隔符，而 `toString()` 方法只能是逗号。
@@ -343,15 +343,15 @@ color.length; // returns 4
 在数组尾部添加一个或多个元素，使用 `push()` 方法。比如：
 
 ```javascript
-var arr = ['1', '2', '3', '4'];
-arr.push('5', '6');
+var arr = ["1", "2", "3", "4"];
+arr.push("5", "6");
 arr; // returns ["1", "2", "3", "4", "5", "6"]
 ```
 
 使用 `pop()` 方法将删除数组的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 `pop()` 不改变数组，然后返回 undefined 值。比如：
 
 ```javascript
-var arr = ['1', '2', '3', '4'];
+var arr = ["1", "2", "3", "4"];
 arr.pop(); // returns 4
 arr; // returns ["1", "2", "3"]
 var arr1 = [];
@@ -376,8 +376,8 @@ null 和 undefined 都表示无，但是也有一些区别。现在控制台上�
 在前面的变量章节中，我们已经简单讲过字符串的基础知识，这里我们再拓展一下。我们前面讲过我们可以使用单引号或双引号，也可以在字符串中使用引号，只要不匹配包围字符串的引号即可。比如：
 
 ```javascript
-var carname = 'shiyanlou';
-var carname = 'shiyanlou';
+var carname = "shiyanlou";
+var carname = "shiyanlou";
 var answer = "I Love 'shiyanlou'";
 var answer = 'I Love "shiyanlou"';
 ```
@@ -391,7 +391,7 @@ var x1 = 'I've got no right to take my place...';
 聪明的你可能会觉得这样不行，我们就换种方法，比如：
 
 ```javascript
-var x1 = 'I have got no right to take my place...';
+var x1 = "I have got no right to take my place...";
 ```
 
 或者：
@@ -415,7 +415,7 @@ var x1 = 'I\'ve got no right to take my place...';
 我们通过 “+” 连接字符串，比如在控制台中输入下面的代码：
 
 ```javascript
-var one = 'Hello,jack.';
+var one = "Hello,jack.";
 var two = "I'm rose";
 result = one + two;
 ```
@@ -437,7 +437,7 @@ typeof myString;
 也可以通过 `Number()` 对象把传递给它的字符串类型的数字转换为数字。
 
 ```javascript
-var myString = '123';
+var myString = "123";
 var myNum = Number(myString);
 typeof myNum;
 ```
@@ -449,7 +449,7 @@ typeof myNum;
 通过 `length` 属性获取字符串的长度，结果返回一个数字。比如：
 
 ```javascript
-var myString = 'hello world ';
+var myString = "hello world ";
 myString.length;
 ```
 
@@ -474,34 +474,34 @@ str.indexOf(searchValue, fromIndex);
 str 指的是我们需要查的较长的字符串，`searchValue` 表示我们指定的较小的字符串，`fromIndex` 表示调用该方法的字符串中开始查找的位置，是一个可选的任意整数值，也可以不写，默认是 0 表示从头开始查，`fromIndex < 0` 和 `fromIndex = 0` 是一样的效果，表示从头开始查找整个字符串。如果 `fromIndex >= str.length`，则该方法的返回值为 -1。这里有个特殊的情况：就是如果被查找的字符串（searchValue）是一个空字符串，那么当 `fromIndex <= 0` 时返回 0，`0 < fromIndex <= str.length` 时返回 `fromIndex`，`fromIndex > str.length` 时返回 `str.length`。这样说你可能不太明白，我们来实践一下看看实际效果：
 
 ```javascript
-'Blue Sky'.indexOf('Blue'); // returns  0
-'Blue Sky'.indexOf('Ble'); // returns -1
-'Blue Sky'.indexOf('Sky', 0); // returns  5
-'Blue Sky'.indexOf('Sky', -1); // returns  5
-'Blue Sky'.indexOf('Sky', 5); // returns  5
-'Blue Sky'.indexOf('Sky', 9); // returns -1
-'Blue Sky'.indexOf('', 0); // returns  0
-'Blue Sky'.indexOf('', 5); // returns 5
-'Blue Sky'.indexOf('', 9); // returns 8
+"Blue Sky".indexOf("Blue"); // returns  0
+"Blue Sky".indexOf("Ble"); // returns -1
+"Blue Sky".indexOf("Sky", 0); // returns  5
+"Blue Sky".indexOf("Sky", -1); // returns  5
+"Blue Sky".indexOf("Sky", 5); // returns  5
+"Blue Sky".indexOf("Sky", 9); // returns -1
+"Blue Sky".indexOf("", 0); // returns  0
+"Blue Sky".indexOf("", 5); // returns 5
+"Blue Sky".indexOf("", 9); // returns 8
 ```
 
 注：返回值指的是指定值第一次出现的索引，如果没有找到返回 -1。`indexOf()` 方法区分大小写，比如：
 
 ```javascript
-'Blue Sky'.indexOf('blue'); // returns -1
-'Blue Sky'.indexOf('Blue'); // returns 0
+"Blue Sky".indexOf("blue"); // returns -1
+"Blue Sky".indexOf("Blue"); // returns 0
 ```
 
 2. 当你知道字符串中的子字符串开始的位置，以及想要结束的字符时，`slice()` 方法可以用来提取它。比如：
 
 ```javascript
-'Blue Sky'.slice(0, 3); // returns "Blu"
+"Blue Sky".slice(0, 3); // returns "Blu"
 ```
 
 注：`slice(strat，end)`，第一个参数 start 是开始提取的字符位置，第二个参数 end 是提取的最后一个字符的后一个位置。所以提取从第一个位置开始，直到但不包括最后一个位置。另外第二个参数也可以不写，不写代表某个字符之后提取字符串中的所有剩余字符。比如：
 
 ```javascript
-'Blue Sky'.slice(2); // returns "ue Sky"
+"Blue Sky".slice(2); // returns "ue Sky"
 ```
 
 #### 转换大小写
@@ -509,7 +509,7 @@ str 指的是我们需要查的较长的字符串，`searchValue` 表示我们�
 字符串方法 `toLowerCase()` 和 `toUpperCase()` 字符串并将所有字符分别转换为小写或大写。比如：
 
 ```javascript
-var string = 'I like study';
+var string = "I like study";
 string.toLowerCase(); // returns "i like study"
 string.toUpperCase(); // returns "I LIKE STUDY"
 ```
@@ -519,8 +519,8 @@ string.toUpperCase(); // returns "I LIKE STUDY"
 可以使用 `replace()` 方法将字符串中的一个子字符串替换为另一个子字符串。比如：
 
 ```javascript
-var string = 'I like study';
-string.replace('study', 'sleep'); // returns "I like sleep"
+var string = "I like study";
+string.replace("study", "sleep"); // returns "I like sleep"
 ```
 
 注意这样只能替换第一个出现的字符串，如果字符串是类似 `I like study study`，那么第二个 `study` 不会被替换。
@@ -528,8 +528,8 @@ string.replace('study', 'sleep'); // returns "I like sleep"
 此时可以使用全局替换方法。
 
 ```js
-var string = 'I like study study';
-string.replace(/study/g, 'sleep');
+var string = "I like study study";
+string.replace(/study/g, "sleep");
 ```
 
 注：字符串的操作方法其实还有很多，我们将在后续的课程中再为大家作深入讲解。
@@ -579,7 +579,7 @@ result1; // returns "true"
 
 ```javascript
 var num1 = 16;
-var num2 = num1 + '';
+var num2 = num1 + "";
 num2; // returns "16"
 ```
 
@@ -597,35 +597,35 @@ num2; // 返回 NaN
 var num3 = Number(null);
 num3; // 返回 0
 
-var num4 = Number('syl');
+var num4 = Number("syl");
 num4; // 返回 NaN
 
-var num5 = Number('   ');
+var num5 = Number("   ");
 num5; // 如果是空字符串返回 0
 
 var num6 = Number(123);
 num6; // 返回123，如果是数字型的字符，返回数字
 
-var num7 = Number('123abc');
+var num7 = Number("123abc");
 num7; // 返回 NaN
 ```
 
 2. `parseInt()` 把字符串转换成整数。比如在控制台中依次输入以下代码：
 
 ```javascript
-var num1 = parseInt('12.3abc');
+var num1 = parseInt("12.3abc");
 num1; // 返回 12，如果第一个字符是数字会解析知道遇到非数字结束，只取整，不是约等于
 
-var num2 = parseInt('abc123');
+var num2 = parseInt("abc123");
 num2; // 返回 NaN，如果第一个字符不是数字或者符号就返回 NaN
 
-var num3 = parseInt('');
+var num3 = parseInt("");
 num3; // 空字符串返回 NaN，但是 Number("")返回 0
 
-var num4 = parseInt('520');
+var num4 = parseInt("520");
 num4; // 返回 520
 
-var num5 = parseInt('0xA');
+var num5 = parseInt("0xA");
 num5; // 返回 10
 ```
 
@@ -639,18 +639,18 @@ num5; // 返回 10
 例子：
 
 ```javascript
-parseFloat('10'); // returns 10
-parseFloat('10.000'); // returns 10
-parseFloat('10.01'); // returns 10.01
-parseFloat('10'); // returns 10
-parseFloat('10 hours'); // returns 10
-parseFloat('aaa 10'); // returns NaN
+parseFloat("10"); // returns 10
+parseFloat("10.000"); // returns 10
+parseFloat("10.01"); // returns 10.01
+parseFloat("10"); // returns 10
+parseFloat("10 hours"); // returns 10
+parseFloat("aaa 10"); // returns NaN
 ```
 
 4. 执行减 0 操作。比如：
 
 ```javascript
-var n = '10';
+var n = "10";
 var m = n - 0;
 m; // returns 10
 ```
@@ -658,7 +658,7 @@ m; // returns 10
 值得注意的是，如果该字符串不是纯粹的数字字符串，那么它执行减 0 操作后，虽然变成了一个数字类型，但是返回值为 NaN。比如：
 
 ```javascript
-var n = 'abc';
+var n = "abc";
 var m = n - 0;
 m; // returns NaN
 typeof m; // returns "number"
@@ -670,14 +670,14 @@ typeof m; // returns "number"
 
 ```javascript
 Boolean(123); // returns true
-Boolean('abc'); // returns true
+Boolean("abc"); // returns true
 Boolean(null); // returns false
 Boolean(undefined); // returns false
 Boolean(NaN); // returns false
 Boolean(0); // returns false
-Boolean(''); // returns false
+Boolean(""); // returns false
 Boolean(false); // returns false
-Boolean('false'); // returns true
+Boolean("false"); // returns true
 Boolean(-1); // returns true
 ```
 
@@ -687,9 +687,9 @@ Boolean(-1); // returns true
 var message;
 if (message) {
   //会自动把 message 转换成 false，最后打印结果为：我很好
-  console.log('你好啊');
+  console.log("你好啊");
 } else {
-  console.log('我很好');
+  console.log("我很好");
 }
 ```
 
