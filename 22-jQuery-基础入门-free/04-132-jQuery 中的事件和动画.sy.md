@@ -73,20 +73,20 @@ JavaScript 使我们有能力创建动态页面。事件是可以被 JavaScript 
 
 ```js
 window.onload = function () {
-  alert('test1');
+  alert("test1");
 };
 window.onload = function () {
-  alert('test2');
+  alert("test2");
 };
 //结果只会输出 test2。
 ```
 
 ```js
 $(document).ready(function () {
-  alert('test1');
+  alert("test1");
 });
 $(document).ready(function () {
-  alert('test2');
+  alert("test2");
 });
 //结果两次都输出
 ```
@@ -165,8 +165,8 @@ $(selector).on(event,childSelector,data,function)
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li').on('click', function () {
-          $(this).clone().appendTo('ul');
+        $("ul li").on("click", function () {
+          $(this).clone().appendTo("ul");
         });
       });
     </script>
@@ -200,8 +200,8 @@ $(selector).on(event,childSelector,data,function)
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li').click(function () {
-          $(this).clone().appendTo('ul');
+        $("ul li").click(function () {
+          $(this).clone().appendTo("ul");
         });
       });
     </script>
@@ -245,15 +245,15 @@ $(selector).hover(inFunction, outFunction);
     </ul>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('ul li').hover(
+        $("ul li").hover(
           function () {
             $(this).css({
-              'font-size': '24px',
+              "font-size": "24px",
             });
           },
           function () {
             $(this).css({
-              'font-size': '14px',
+              "font-size": "14px",
             });
           }
         );
@@ -295,14 +295,14 @@ $(selector).hover(inFunction, outFunction);
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('span').on('click', function () {
-          alert('我是内部span元素，我被点击了');
+        $("span").on("click", function () {
+          alert("我是内部span元素，我被点击了");
         });
-        $('#content').on('click', function () {
-          alert('我是外部div元素，我被点击了');
+        $("#content").on("click", function () {
+          alert("我是外部div元素，我被点击了");
         });
-        $('body').on('click', function () {
-          alert('我是body元素，我被点击了');
+        $("body").on("click", function () {
+          alert("我是body元素，我被点击了");
         });
       });
     </script>
@@ -331,7 +331,7 @@ $(selector).hover(inFunction, outFunction);
 - 事件对象：在程序中使用事件对象非常简单，只需要为函数添加一个参数。比如：
 
 ```js
-$('element').on('click', function (event) {
+$("element").on("click", function (event) {
   //event 表示事件对象
 });
 ```
@@ -354,16 +354,16 @@ $('element').on('click', function (event) {
     </div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('span').on('click', function (event) {
-          alert('我是内部span元素，我被点击了');
+        $("span").on("click", function (event) {
+          alert("我是内部span元素，我被点击了");
           event.stopPropagation(); //停止事件冒泡
         });
-        $('#content').on('click', function (event) {
-          alert('我是外部div元素，我被点击了');
+        $("#content").on("click", function (event) {
+          alert("我是外部div元素，我被点击了");
           event.stopPropagation(); //停止事件冒泡
         });
-        $('body').on('click', function () {
-          alert('我是body元素，我被点击了');
+        $("body").on("click", function () {
+          alert("我是body元素，我被点击了");
         });
       });
     </script>
@@ -391,7 +391,7 @@ $('element').on('click', function (event) {
     <a href="https://www.lanqiao.cn/">实验楼</a>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('a').click(function (event) {
+        $("a").click(function (event) {
           event.preventDefault();
         });
       });
@@ -428,7 +428,7 @@ jQuery 在遵循 W3C 规范的情况下，对事件对象的常用属性进行�
     <a href="https://www.lanqiao.cn/">实验楼</a>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('a').click(function (event) {
+        $("a").click(function (event) {
           event.preventDefault();
           alert(event.type);
         });
@@ -468,8 +468,8 @@ jQuery 在遵循 W3C 规范的情况下，对事件对象的常用属性进行�
     <div style="color:red;"></div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p, button, h1').click(function (event) {
-          $('div').html('通过 ' + event.target.nodeName + ' 元素触发。');
+        $("p, button, h1").click(function (event) {
+          $("div").html("通过 " + event.target.nodeName + " 元素触发。");
         });
       });
     </script>
@@ -499,7 +499,7 @@ jQuery 在遵循 W3C 规范的情况下，对事件对象的常用属性进行�
     <script type="text/javascript">
       $(document).ready(function () {
         $(document).mousemove(function (event) {
-          $('span').text('X: ' + event.pageX + ', Y: ' + event.pageY);
+          $("span").text("X: " + event.pageX + ", Y: " + event.pageY);
         });
       });
     </script>
@@ -589,11 +589,11 @@ $(selector).off(event,selector,function(eventObj),map)
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').on('click', function () {
-          $(this).css('background-color', 'red');
+        $("p").on("click", function () {
+          $(this).css("background-color", "red");
         });
-        $('button').click(function () {
-          $('p').off('click');
+        $("button").click(function () {
+          $("p").off("click");
         });
       });
     </script>
@@ -636,9 +636,9 @@ $(selector).one(event,data,function)
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').one('click', function () {
+        $("p").one("click", function () {
           $(this).animate({
-            fontSize: '+=6px',
+            fontSize: "+=6px",
           });
         });
       });
@@ -684,12 +684,12 @@ $(selector).trigger(event,param1,param2,...)
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('p').one('click', function () {
+        $("p").one("click", function () {
           $(this).animate({
-            fontSize: '+=6px',
+            fontSize: "+=6px",
           });
         });
-        $('p').trigger('click');
+        $("p").trigger("click");
       });
     </script>
   </body>
@@ -779,7 +779,7 @@ $(selector).trigger(event,param1,param2,...)
 `trigger()` 方法触发事件后，会执行浏览器默认操作。例如：
 
 ```js
-$('input').trigger('focus');
+$("input").trigger("focus");
 ```
 
 以上代码不仅会触发为 input 元素绑定的 foucs 事件，也会使 input 元素本身得到焦点（浏览器的默认操作）。如果我们只想触发绑定的 focus 事件，而不想执行浏览器默认操作，我们可以使用 `triggerHandler()` 方法。它们之间的不同之处有：
@@ -811,14 +811,14 @@ $('input').trigger('focus');
     <input type="text" value="将获取焦点" />
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#old').click(function () {
-          $('input').trigger('focus');
+        $("#old").click(function () {
+          $("input").trigger("focus");
         });
-        $('#new').click(function () {
-          $('input').triggerHandler('focus');
+        $("#new").click(function () {
+          $("input").triggerHandler("focus");
         });
-        $('input').focus(function () {
-          $('<span>获取焦点!</span>').appendTo('body').fadeOut(1000);
+        $("input").focus(function () {
+          $("<span>获取焦点!</span>").appendTo("body").fadeOut(1000);
         });
       });
     </script>
@@ -884,14 +884,14 @@ $(selector).hide(speed, easing, callback);
     <button class="btn2">显示</button>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.btn1').click(function () {
-          $('p').hide(1000, function () {
-            $('p').css('background-color', 'yellow');
+        $(".btn1").click(function () {
+          $("p").hide(1000, function () {
+            $("p").css("background-color", "yellow");
           });
         });
-        $('.btn2').click(function () {
-          $('p').show(1000, function () {
-            $('p').css('background-color', 'red');
+        $(".btn2").click(function () {
+          $("p").show(1000, function () {
+            $("p").css("background-color", "red");
           });
         });
       });
@@ -946,14 +946,14 @@ $(selector).fadeOut(speed, easing, callback);
     <button class="btn2">显示</button>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.btn1').click(function () {
-          $('p').fadeOut(2000, function () {
-            $('p').css('background-color', 'yellow');
+        $(".btn1").click(function () {
+          $("p").fadeOut(2000, function () {
+            $("p").css("background-color", "yellow");
           });
         });
-        $('.btn2').click(function () {
-          $('p').fadeIn(2000, function () {
-            $('p').css('background-color', 'red');
+        $(".btn2").click(function () {
+          $("p").fadeIn(2000, function () {
+            $("p").css("background-color", "red");
           });
         });
       });
@@ -1006,14 +1006,14 @@ $(selector).slideDown(speed, easing, callback);
     <button class="btn2">显示</button>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.btn1').click(function () {
-          $('p').slideUp(2000, function () {
-            $('p').css('background-color', 'yellow');
+        $(".btn1").click(function () {
+          $("p").slideUp(2000, function () {
+            $("p").css("background-color", "yellow");
           });
         });
-        $('.btn2').click(function () {
-          $('p').slideDown(2000, function () {
-            $('p').css('background-color', 'red');
+        $(".btn2").click(function () {
+          $("p").slideDown(2000, function () {
+            $("p").css("background-color", "red");
           });
         });
       });
@@ -1077,9 +1077,9 @@ $(selector).animate({ params }, speed, callback);
     <div class="title">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.title').animate(
+        $(".title").animate(
           {
-            left: '500px',
+            left: "500px",
           },
           3000
         );
@@ -1119,11 +1119,11 @@ $(selector).animate({ params }, speed, callback);
     <div class="title">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.title').animate(
+        $(".title").animate(
           {
-            left: '500px',
-            height: '+=150px',
-            width: '+=150px',
+            left: "500px",
+            height: "+=150px",
+            width: "+=150px",
           },
           3000
         );
@@ -1163,21 +1163,21 @@ $(selector).animate({ params }, speed, callback);
     <div class="title">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.title').animate(
+        $(".title").animate(
           {
-            left: '500px',
+            left: "500px",
           },
           3000
         );
-        $('.title').animate(
+        $(".title").animate(
           {
-            height: '+=150px',
+            height: "+=150px",
           },
           3000
         );
-        $('.title').animate(
+        $(".title").animate(
           {
-            width: '+=150px',
+            width: "+=150px",
           },
           3000
         );
@@ -1213,22 +1213,22 @@ $(selector).animate({ params }, speed, callback);
     <div class="title">shiyanlou</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.title')
+        $(".title")
           .animate(
             {
-              left: '500px',
+              left: "500px",
             },
             3000
           )
           .animate(
             {
-              height: '+=150px',
+              height: "+=150px",
             },
             3000
           )
           .animate(
             {
-              width: '+=150px',
+              width: "+=150px",
             },
             3000
           );
@@ -1262,9 +1262,9 @@ $(selector).animate({ params }, speed, callback);
     <p>我是测试段落</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('button').click(function () {
-          $('p').show(1000);
-          $('p').css('background-color', 'red');
+        $("button").click(function () {
+          $("p").show(1000);
+          $("p").css("background-color", "red");
         });
       });
     </script>
@@ -1296,9 +1296,9 @@ $(selector).animate({ params }, speed, callback);
     <p>我是测试段落</p>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('button').click(function () {
-          $('p').show(1000, function () {
-            $('p').css('background-color', 'red');
+        $("button").click(function () {
+          $("p").show(1000, function () {
+            $("p").css("background-color", "red");
           });
         });
       });
@@ -1363,12 +1363,12 @@ $(selector).stop( [clearQueue ] [, jumpToEnd ] )
     <div id="panel">Hello syl!</div>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#flip').click(function () {
-          $('#panel').slideDown(5000);
-          $('#panel').slideUp(5000);
+        $("#flip").click(function () {
+          $("#panel").slideDown(5000);
+          $("#panel").slideUp(5000);
         });
-        $('#stop').click(function () {
-          $('#panel').stop();
+        $("#stop").click(function () {
+          $("#panel").stop();
         });
       });
     </script>
@@ -1387,7 +1387,7 @@ $(selector).stop( [clearQueue ] [, jumpToEnd ] )
 在使用 `animate()` 方法的时候，要避免动画积累而导致的动画与用户的行为不一致，当用户快速在某个元素上执行 `animate()` 动画时，就会出现动画积累，解决方法是判断元素是否处于动画状态，如果元素不处于动画状态，才为元素添加新的动画，否则不添加，代码如下：
 
 ```js
-if (!$(element).is(':animated')) {
+if (!$(element).is(":animated")) {
   //判断元素是否处于动画状态
   //如果当前没有进行动画，则添加新动画
 }
@@ -1451,12 +1451,12 @@ $(selector).delay(speed, queueName);
     <br />
     <script type="text/javascript">
       $(document).ready(function () {
-        $('button').click(function () {
-          $('#div1').delay('slow').fadeIn();
-          $('#div2').delay('fast').fadeIn();
-          $('#div3').delay(800).fadeIn();
-          $('#div4').delay(2000).fadeIn();
-          $('#div5').delay(4000).fadeIn();
+        $("button").click(function () {
+          $("#div1").delay("slow").fadeIn();
+          $("#div2").delay("fast").fadeIn();
+          $("#div3").delay(800).fadeIn();
+          $("#div4").delay(2000).fadeIn();
+          $("#div5").delay(4000).fadeIn();
         });
       });
     </script>

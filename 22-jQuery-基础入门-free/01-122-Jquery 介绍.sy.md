@@ -286,20 +286,20 @@ $(funciton(){
 
 ```js
 window.onload = function () {
-  alert('test1');
+  alert("test1");
 };
 window.onload = function () {
-  alert('test2');
+  alert("test2");
 };
 //结果只会输出 test2。
 ```
 
 ```js
 $(document).ready(function () {
-  alert('test1');
+  alert("test1");
 });
 $(document).ready(function () {
-  alert('test2');
+  alert("test2");
 });
 //结果两次都输出
 ```
@@ -325,7 +325,7 @@ $(document).ready(function () {
       //等待dom元素加载完毕
       $(document).ready(function () {
         //弹出一个框:显示hello syl
-        alert('hello syl');
+        alert("hello syl");
       });
     </script>
   </body>
@@ -387,15 +387,15 @@ $(document).ready(function () {
     <script type="text/javascript">
       //等待dom元素加载完毕
       $(document).ready(function () {
-        $('.level1>a').click(function () {
+        $(".level1>a").click(function () {
           $(this)
-            .addClass('current')
+            .addClass("current")
             .next()
             .show()
             .parent()
             .siblings()
-            .children('a')
-            .removeClass('current')
+            .children("a")
+            .removeClass("current")
             .next()
             .hide();
           return false;
@@ -416,15 +416,15 @@ $(document).ready(function () {
 
 ```js
 $(document).ready(function () {
-  $('.level1>a').click(function () {
+  $(".level1>a").click(function () {
     $(this)
-      .addClass('current') //给当前元素添加"current"样式
+      .addClass("current") //给当前元素添加"current"样式
       .next()
       .show() //下一个元素显示
       .parent()
       .siblings()
-      .children('a')
-      .removeClass('current') //父元素的同辈元素的子元素a移除"current"样式
+      .children("a")
+      .removeClass("current") //父元素的同辈元素的子元素a移除"current"样式
       .next()
       .hide(); //它们的下一个元素隐藏
     return false;
@@ -455,7 +455,7 @@ DOM （Document Object Model）对象，也就是我们经常说的文档对象�
 h1,p,ul 以及 li 标签都是 DOM 元素节点，我们可以通过 JavaScript 中的 `document.getElementById()`，`document.getElementsByTagName()` 等来获取元素节点，像这样获取的 DOM 元素就是 DOM 对象，DOM 对象可以使用 JavaScript 中的方法，比如：
 
 ```js
-var domObj = document.getElementById('id'); //获取DOM对象
+var domObj = document.getElementById("id"); //获取DOM对象
 var objHtml = domObj.innerHTML; //使用JavaScript中的属性innerHTML
 ```
 
@@ -464,13 +464,13 @@ var objHtml = domObj.innerHTML; //使用JavaScript中的属性innerHTML
 jQuery 对象就是通过 jQuery 包装 DOM 对象后产生的对象。jQuery 对象是 jQuery 独有的，如果一个对象是 jQuery 对象，那么它就可以使用 jQuery 里的方法，比如：
 
 ```js
-$('#syl').html(); //获取id为syl的元素内的html代码，html()是jQuery中的方法
+$("#syl").html(); //获取id为syl的元素内的html代码，html()是jQuery中的方法
 ```
 
 这段代码等同于：
 
 ```js
-document.getElementById('syl').innerHTML;
+document.getElementById("syl").innerHTML;
 ```
 
 在 jQuery 对象中无法使用 DOM 对象中的任何方法，例如 `$("#syl").innerHTML;` 之类的写法是错的，可以使用 `$("#syl").html();` 之类的 jQuery 方法来代替，同样的道理，DOM 对象也不能使用 jQuery 里的方法，例如:`document.getElementById("syl").html();`也是会报错的。
@@ -500,14 +500,14 @@ var test = DOM 对象;
 - [index]:jQuery 对象是一个类似数组的对象，可以通过 `[index]` 的方法得到对应的 DOM 对象，比如：
 
 ```js
-var $cr = $('#cr'); //jQuery 对象
+var $cr = $("#cr"); //jQuery 对象
 var cr = $cr[0]; //DOM 对象
 ```
 
 - 通过 get(index) 方法得到相应的 DOM 对象，比如：
 
 ```js
-var $cr = $('#cr'); //jQuery 对象
+var $cr = $("#cr"); //jQuery 对象
 var cr = $cr.get(0); //DOM 对象
 ```
 
@@ -516,7 +516,7 @@ var cr = $cr.get(0); //DOM 对象
 对于一个 DOM 对象，只需要用 `$()` 把 DOM 对象包装起来，就可以获得一个 jQuery 对象了，比如：
 
 ```js
-var cr = document.getElementById('cr'); //DOM 对象
+var cr = document.getElementById("cr"); //DOM 对象
 var $cr = $(cr); //jQuery 对象
 ```
 
@@ -539,12 +539,12 @@ DOM 方式判断复选框是否被选中：
     <script type="text/javascript">
       //等待dom元素加载完毕
       $(document).ready(function () {
-        var $cr = $('#cr'); //jQuery对象
+        var $cr = $("#cr"); //jQuery对象
         var cr = $cr[0]; //DOM对象，或者$cr.get(0)
         $cr.click(function () {
           if (cr.checked) {
             //DOM方式判断
-            alert('你已同意本协议');
+            alert("你已同意本协议");
           }
         });
       });
@@ -570,10 +570,10 @@ jQuery 方式判断复选框是否被选中：
     <script type="text/javascript">
       //等待dom元素加载完毕
       $(document).ready(function () {
-        var $cr = $('#cr');
+        var $cr = $("#cr");
         $cr.click(function () {
-          if ($cr.is(':checked')) {
-            alert('你已同意本协议');
+          if ($cr.is(":checked")) {
+            alert("你已同意本协议");
           }
         });
       });
@@ -638,8 +638,8 @@ noConflict() 方法会释放对 \$ 标识符的控制，这样其他脚本就可
       //等待dom元素加载完毕
       var jq = $.noConflict();
       jq(document).ready(function () {
-        jq('button').click(function () {
-          jq('p').text('jQuery 仍然在工作!');
+        jq("button").click(function () {
+          jq("p").text("jQuery 仍然在工作!");
         });
       });
     </script>
@@ -664,8 +664,8 @@ noConflict() 方法会释放对 \$ 标识符的控制，这样其他脚本就可
       //等待dom元素加载完毕
       $.noConflict();
       jQuery(document).ready(function ($) {
-        $('button').click(function () {
-          $('p').text('jQuery 仍然在工作!');
+        $("button").click(function () {
+          $("p").text("jQuery 仍然在工作!");
         });
       });
     </script>

@@ -36,9 +36,9 @@ if (条件) {
 
 ```javascript
 if (3 > 2) {
-  console.log('我真帅');
+  console.log("我真帅");
 } else {
-  console.log('不可能');
+  console.log("不可能");
 }
 ```
 
@@ -65,13 +65,13 @@ else{
 ```javascript
 var d = new Date().getDay();
 if (d == 0) {
-  console.log('今天星期天');
+  console.log("今天星期天");
 } else if (d == 1) {
-  console.log('今天星期一');
+  console.log("今天星期一");
 } else if (d == 2) {
-  console.log('今天星期二');
+  console.log("今天星期二");
 } else {
-  console.log('好多啊，我不想写了');
+  console.log("好多啊，我不想写了");
 }
 ```
 
@@ -98,25 +98,25 @@ switch(k){
 var d = new Date().getDay();
 switch (d) {
   case 0:
-    console.log('今天星期天');
+    console.log("今天星期天");
     break;
   case 1:
-    console.log('今天星期一');
+    console.log("今天星期一");
     break;
   case 2:
-    console.log('今天星期二');
+    console.log("今天星期二");
     break;
   case 3:
-    console.log('今天星期三');
+    console.log("今天星期三");
     break;
   case 4:
-    console.log('今天星期四');
+    console.log("今天星期四");
     break;
   case 5:
-    console.log('今天星期五');
+    console.log("今天星期五");
     break;
   default:
-    console.log('今天星期六');
+    console.log("今天星期六");
     break;
 }
 ```
@@ -134,7 +134,7 @@ switch (d) {
 例子:
 
 ```javascript
-3 > 2 ? console.log('3 比 2 大') : console.log('3 比 2 小');
+3 > 2 ? console.log("3 比 2 大") : console.log("3 比 2 小");
 ```
 
 ## 循环
@@ -192,7 +192,7 @@ for (var i = 1; i <= 7; i++) {
   if (i % 7 == 0) {
     console.log(i);
     continue;
-    console.log('*');
+    console.log("*");
   }
 }
 ```
@@ -374,10 +374,10 @@ function(){
 例子：
 
 ```javascript
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
 myButton.onclick = function () {
-  alert('hello');
+  alert("hello");
 };
 ```
 
@@ -389,7 +389,7 @@ myButton.onclick = function () {
 
 ```javascript
 (function () {
-  alert('hello');
+  alert("hello");
 })();
 ```
 
@@ -414,17 +414,17 @@ myButton.onclick = function () {
       function star(i) {
         for (var j = 1; j <= i; j++) {
           for (var k = 1; k <= j; k++) {
-            document.write('*');
+            document.write("*");
           }
-          document.write('<br>');
+          document.write("<br>");
         }
       }
       do {
-        var n = prompt('请输入一个正整数');
+        var n = prompt("请输入一个正整数");
         if (Number(n) > 0 && parseInt(n) == parseFloat(n)) {
           star(n);
         } else {
-          alert('输入错误，请输入一个正整数');
+          alert("输入错误，请输入一个正整数");
         }
       } while (!(Number(n) > 0 && parseInt(n) == parseFloat(n)));
     </script>
