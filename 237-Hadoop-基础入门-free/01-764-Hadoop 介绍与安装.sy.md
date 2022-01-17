@@ -15,6 +15,10 @@ enable_checker: true
 - Hadoop 生态系统
 - Hadoop 环境搭建
 
+#### 交流群
+
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid1735817-20220112-1641985629701) 
+
 ## Hadoop 介绍
 
 Apache Hadoop 软件库是一个框架，允许在集群服务器上使用简单的编程模型对大数据集进行分布式处理。Hadoop 被设计成能够从单台服务器扩展到数以千计的服务器，每台服务器都有本地的计算和存储资源。Hadoop 的高可用性并不依赖硬件，其代码库自身就能在应用层侦测并处理硬件故障，因此能基于服务器集群提供高可用性的服务。
