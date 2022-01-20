@@ -22,8 +22,7 @@ enable_checker: true
 
 #### 1.3 交流学习
 
-![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid1735817-20220112-1641985284891) 
-
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid1735817-20220112-1641985284891)
 
 ## 二、实验内容
 

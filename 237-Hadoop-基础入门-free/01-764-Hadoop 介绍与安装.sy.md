@@ -17,7 +17,7 @@ enable_checker: true
 
 #### 交流群
 
-![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid1735817-20220112-1641985629701) 
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid1735817-20220112-1641985629701)
 
 ## Hadoop 介绍
 
