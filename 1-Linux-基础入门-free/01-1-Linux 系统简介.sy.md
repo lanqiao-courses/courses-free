@@ -20,6 +20,10 @@ enable_checker: true
 - linux 与 windows 的不同
 - 如何学习 linux
 
+#### 1.3 交流学习
+
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid1735817-20220112-1641985284891)
+
 ## 二、实验内容
 
 #### linux 为何物
