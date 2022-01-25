@@ -411,16 +411,16 @@ if __name__ == '__main__':
 
 可以通过下面命令将代码下载并解压到实验环境中，进入相关文件夹中：
 
-```sh
-$ wget https://labfile.oss.aliyuncs.com/courses/70/python_markup.zip
-$ unzip python_markup.zip
-$ cd python_markup
+```bash
+wget https://labfile.oss.aliyuncs.com/courses/70/python_markup.zip
+unzip python_markup.zip
+cd python_markup
 ```
 
 下载的文件夹中已经包含了测试所用的 `.txt` 文件，同学们也可以使用自己编写的 `.txt` 文件，只要保证 `.txt` 文件与之前编写的四部分代码处于同一目录下即可，并进入该目录下即可。
 接下来我们运行代码，在命令行终端输入以下命令运行程序（纯文本文件为 `test.txt`，生成 HTML 文件为 `test.html`）：
 
-```
+```bash
 python3 markup.py < test.txt > test.html
 ```
 
