@@ -27,6 +27,7 @@ Rust 提供了一个强大的宏系统，可进行元编程（metaprogramming）
 ```bash
 sudo apt install rustc -y
 ```
+
 ![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220216-1644973783064)
 
 安装完成后可以通过 `rustc --version` 验证。

@@ -75,6 +75,7 @@ enable_checker: true
 ```bash
 sudo apt install rustc -y
 ```
+
 ![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220216-1644973783064)
 
 安装完成后可以通过 `rustc --version` 验证。
