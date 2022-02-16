@@ -70,6 +70,18 @@ enable_checker: true
 
 ## Hello World
 
+在实验开始之前，我们首先需要安装 rust 开发环境，
+
+```bash
+sudo apt install rustc -y
+```
+
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220216-1644973783064)
+
+安装完成后可以通过 `rustc --version` 验证。
+
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220216-1644973867988)
+
 我们的第一个程序将打印传说中的 "Hello World" 消息，下面是完整的程序代码和编译运行过程。
 
 这是传统的 Hello World 程序的源码。首先，在实验楼 WebIDE 中 `/home/project` 目录下新建 `hello.rs` 文件，编写以下代码（以 `//` 开头的注释内容可以不必输入）：
