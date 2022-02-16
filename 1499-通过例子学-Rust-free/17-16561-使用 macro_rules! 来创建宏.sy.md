@@ -20,6 +20,19 @@ Rust 提供了一个强大的宏系统，可进行元编程（metaprogramming）
 - DSL (领域专用语言)
 - 可变参数接口
 
+#### 安装环境
+
+在实验开始之前，我们首先需要安装 rust 开发环境，
+
+```bash
+sudo apt install rustc -y
+```
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220216-1644973783064)
+
+安装完成后可以通过 `rustc --version` 验证。
+
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220216-1644973867988)
+
 ## 宏简介
 
 Rust 提供了一个强大的宏系统，可进行元编程（metaprogramming）。你已经在前面的章节中看到，宏看起来和函数很像，只不过名称末尾有一个感叹号 `!` 。宏并不产生函数调用，而是展开成源码，并和程序的其余部分一起被编译。Rust 又有一点和 C 以及其他语言都不同，那就是 Rust 的宏会展开为抽象语法树（AST，abstract syntax tree），而不是像字符串预处理那样直接替换成代码，这样就不会产生无法预料的优先权错误。
@@ -109,7 +122,7 @@ fn main() {
 
 程序运行结果如下：
 
-![程序运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382962/wm)
+![程序运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382962)
 
 这里列出全部指示符：
 
@@ -155,7 +168,7 @@ fn main() {
 
 程序运行结果如下：
 
-![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382964/wm)
+![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382964)
 
 ### 重复
 
@@ -184,7 +197,7 @@ fn main() {
 
 程序运行结果如下：
 
-![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382966/wm)
+![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382966)
 
 ## DRY (不写重复代码)
 
@@ -257,7 +270,7 @@ $ rustc --test dry.rs && ./dry
 
 执行结果如下：
 
-![执行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382967/wm)
+![执行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382967)
 
 ## DSL（领域专用语言）
 
@@ -288,7 +301,7 @@ fn main() {
 
 程序运行结果如下：
 
-![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382969/wm)
+![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382969)
 
 这个例子非常简单，但是已经有很多利用宏开发的复杂接口了，比如 [lazy_static](https://crates.io/crates/lazy_static) 和 [clap](https://crates.io/crates/clap)。
 
@@ -326,7 +339,7 @@ fn main() {
 
 程序运行结果如下：
 
-![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382971/wm)
+![运行结果](https://doc.shiyanlou.com/courses/uid1172186-20200107-1578382971)
 
 ## 实验总结
 
