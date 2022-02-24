@@ -20,7 +20,7 @@ enable_checker: true
 
 本节部分内容参考以下文档制作：
 
-- [例行性工作排程(crontab) - 鸟哥私房菜](http://linux.vbird.org/linux_basic/0430cron.php)
+- [例行性工作排程(crontab) - 鸟哥私房菜](http://cn.linux.vbird.org/linux_basic/0430cron.php)
 - [Linux Crontab 百度百科](http://baike.baidu.com/link?url=h_n27RWno87VR4N0xoTGQfcnhoWXH_5JtLNEjuTqisXIasgLiUbWWjJwIkc3vnEIJrCrlZ1oQ4q3xrTz8VRtd_)
 
 ## 二、crontab 的使用
@@ -184,7 +184,7 @@ crontab -r
 
 本章部分描述参考下面的文档实现，想进一步的学习该知识或者相关知识推荐查看：
 
-- [例行性工作排程(crontab) - 鸟哥私房菜](http://linux.vbird.org/linux_basic/0430cron.php)
+- [例行性工作排程(crontab) - 鸟哥私房菜](http://cn.linux.vbird.org/linux_basic/0430cron.php)
 
 ## 四、实验总结
 
