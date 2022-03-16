@@ -16,8 +16,12 @@
 
 - 阅读 [贡献者手册](https://github.com/lanqiao-courses/courses-free/discussions/categories/%E8%B4%A1%E7%8C%AE%E8%80%85%E6%89%8B%E5%86%8C)。
 
+### 创作简短内容
+
+写课程太费时间，想创作简短的技术内容？试试 [轻实验](https://www.lanqiao.cn/questions/229528/)。
+
 ## 许可协议
 
-本作品采用 [知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/) 进行许可。如果您是高校教师，可以 [免费申请试用蓝桥云课](https://www.lanqiao.cn/saas/school/)。
+本作品采用 [知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/) 进行许可，请严格按照协议使用内容，尊重知识产权。如果您是高校教师，可以 [免费申请试用蓝桥云课](https://www.lanqiao.cn/saas/school/)。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
