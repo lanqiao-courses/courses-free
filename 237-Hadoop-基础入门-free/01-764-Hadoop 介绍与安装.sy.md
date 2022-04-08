@@ -40,7 +40,7 @@ Apache Hadoop 软件库是一个框架，允许在集群服务器上使用简单
 
 ### Apache 版本衍化
 
-截止 2012年12月23日，Apache Hadoop 版本分为两代，我们将第一代 Hadoop 称为 Hadoop 1.0，第二代 Hadoop 称为 Hadoop 2.0。（注：2017 年 12 月 13 日，已发布 3.0 版本。）
+截止 2012 年 12 月 23 日，Apache Hadoop 版本分为两代，我们将第一代 Hadoop 称为 Hadoop 1.0，第二代 Hadoop 称为 Hadoop 2.0。（注：2017 年 12 月 13 日，已发布 3.0 版本。）
 
 第一代 Hadoop 包含三个大版本，分别是 0.20.x，0.21.x 和 0.22.x。其中，0.20.x 最后演化成 1.0.x，变成了稳定版，而 0.21.x 和 0.22.x 则包括 NameNode HA 等新的重大特性。
 
