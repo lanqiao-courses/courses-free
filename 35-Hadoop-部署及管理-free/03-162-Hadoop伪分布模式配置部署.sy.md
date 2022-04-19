@@ -90,14 +90,6 @@ $ source ~/.bashrc
 ```
 
 ```checker
-- name: Download Hadoop
-  script: |
-    #!/bin/bash
-    ls /home/shiyanlou/hadoop-2.6.0.tar.gz
-  error: 您还没有下载 Hadoop 到 /home/hadoop/，请参考上一节的内容进行
-```
-
-```checker
 - name: Install Hadoop
   script: |
     #!/bin/bash
