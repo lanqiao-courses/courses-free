@@ -67,7 +67,7 @@ enable_checker: true
 
 慢慢的，**论文 Hub** 变成了全球最大的「交友社区」，并逐渐演化成了一种时尚 —— 找工作时，面试官会先问你有没有 **论文 hub** 的账号，有多少个赞、多少粉丝；而有优秀作品的人，会被大公司争抢录用……
 
-这个 论文 hub，就是我们今天要学习的 **Github** ，只不过论文换成了程序代码。Github 大概长这样：
+这个 论文 hub，就是我们今天要学习的 **GitHub** ，只不过论文换成了程序代码。GitHub 大概长这样：
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558617168374)
 
@@ -128,7 +128,7 @@ Git 是一个版本控制系统，可以理解为一个工具，使用之前必�
 
 - Fedora 上：yum install git-core
 
-蓝桥云课环境中预装了 `Git`，打开 `终端` ，输入 `git` 可以检测是否安装成功：
+蓝桥云课的环境中预装了 `Git`，打开 `终端` ，输入 `git` 可以检测是否安装成功：
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558592988977)
 
@@ -169,6 +169,33 @@ Git 是一个版本控制系统，可以理解为一个工具，使用之前必�
 创建后，页面跳转到新建仓库的主页面，第一步成功了！
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558596181235)
+
+### 添加 SSH 关联授权
+
+在 2021 年 8 月 GitHub 更新后，已经不再允许使用账户密码操作 GitHub，必须使用 SSH 密钥登陆。所以我们可以在系统中创建 SSH 公私钥，并将公钥放到 GitHub 指定位置。如此操作即可生成 GitHub 账户对于当前系统中的 Git 授权。
+
+终端执行 `ssh-keygen` 命令按几次回车生成公私钥，公私钥存放在主目录下的隐藏目录 `.ssh` 中的两个文件中：
+
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756454421.png)
+
+将 `~/.ssh/id_rsa.pub` 文件中的公钥内容复制出来，实验环境中可以使用右侧工具栏中的剪切板复制：
+
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756470163.png)
+
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756481375.png)
+
+然后在 GitHub 网页上添加公钥：
+
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756492545.png)
+
+Title 自定义，把剪切板中的内容粘贴到 Key 中，点击绿色按钮添加 SSH Key 即可：
+
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756503765.png)
+
+使用 SSH 的好处主要有两点：
+
+- 免密码推送，执行 `git push` 时不再需要输入用户名和密码了；
+- 提高数据传输速度。它不是必须的，比如在课程中挑战环境是不可保存的，一次性的，这种环境就没有必要创建 SSH 了，因为相较好处来说，还是太麻烦了。
 
 ### 创建文件
 
@@ -283,7 +310,7 @@ git remote add origin 仓库链接
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558607126461)
 
-`add` 很容易明白 —— 添加。`git remote add` 表示通知 Git 去添加一个远程仓库，后面接上的 `origin` 是这个仓库的小名，方便以后沟通，通常默认用 `origin` 来表示；最后再接上远程仓库的地址，即你刚刚创建的 Github 仓库链接。
+`add` 很容易明白 —— 添加。`git remote add` 表示通知 Git 去添加一个远程仓库，后面接上的 `origin` 是这个仓库的小名，方便以后沟通，通常默认用 `origin` 来表示；最后再接上远程仓库的地址，即你刚刚创建的 GitHub 仓库链接。
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558607911486)
 
@@ -297,13 +324,11 @@ git remote add origin 仓库链接
 git push origin master
 ```
 
-执行后，GitHub 服务器 需要验证你的身份，按提示输入你的用户名和密码即可完成 push 同步。
+执行后，GitHub 服务器会验证你的身份，完成 push 同步。因为我们已经配置了 SSH，该过程会自动完成。
 
-**⚠️ 注意：**在 Linux 中输入密码是不可见的，输完后直接按回车键即可。
+**目前国内网络访问 GitHub 不太稳定，如果遇到连接失败，可以多尝试几次。**
 
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558609198353)
-
-接下来就是见证奇迹的时刻 —— 再刷新你的 Github 仓库，就会发现多了这些东西：
+接下来就是见证奇迹的时刻 —— 再刷新你的 GitHub 仓库，就会发现多了这些东西：
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558609348514)
 
@@ -372,11 +397,11 @@ git clone https://github.com/shiyanlou/gitproject
 - 漂亮的学习记录，可以激励你以后的学习
 - 这将是你未来求职最好的证明
 
-我们为你准备了四张从 Linux 到 Java 到 Git 的学习脑图，请你试着用今天学到的内容，上传到 `Louplus` 的仓库中:
+我们为你准备了四张从 Linux 到 Python 到 Git 的学习脑图，请你试着用今天学到的内容，上传到 `Louplus` 的仓库中:
 
 **💡 步骤:**
 
-1. 在 `Github` 的个人主页中新建一个仓库，命名为 `Louplus`
+1. 在 `GitHub` 的个人主页中新建一个仓库，命名为 `Louplus`
 
 2. 复制仓库链接，在实验环境中，将该仓库克隆到本地
    ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190524-1558684946974)
@@ -392,9 +417,9 @@ wget https://labfile.oss.aliyuncs.com/courses/1330/git.png
 
 4. 使用 `git add --all` 命令，添加仓库内的所有文件
 
-5. 使用 `git commit`、`git remote`、`git push` 命令，将本地仓库同步到 Github 中
+5. 使用 `git commit`、`git remote`、`git push` 命令，将本地仓库同步到 GitHub 中
 
-完成后，再次刷新你的 `Github` 仓库，4 张图片就这么被上传了～
+完成后，再次刷新你的 `GitHub` 仓库，4 张图片就这么被上传了～
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190524-1558685949102)
 
