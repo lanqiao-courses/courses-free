@@ -86,7 +86,7 @@ $ hadoop fs -mkdir -p /user/hadoop/testdata
 下载数据及上传数据（如果为单机模式，需要将该数据拷贝至 testdata 目录下）：
 
 ```bash
-$ wget https://labfile.oss.aliyuncs.com/synthetic_control.data
+$ wget https://labfile.oss-internal.aliyuncs.com/synthetic_control.data
 $ hadoop fs -put synthetic_control.data /user/hadoop/testdata
 ```
 

@@ -979,7 +979,7 @@ ctx.textBaseline = "alphabetic|top|hanging|middle|ideographic|bottom";
 在 Terminal 输入以下命令获取图片绘制用到的图片：
 
 ```bash
-wget https://labfile.oss.aliyuncs.com/courses/1248/a.png
+wget https://labfile.oss-internal.aliyuncs.com/courses/1248/a.png
 ```
 
 使用 `drawImage()` 方法在画布上绘制图像、画布或视频。`drawImage()` 方法也能够绘制图像的某些部分，或增加或减少图像的尺寸。

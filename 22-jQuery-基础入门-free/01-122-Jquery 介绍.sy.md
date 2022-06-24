@@ -202,7 +202,7 @@ jQuery 强调的理念就是写的少，做的多（write less,do more）。它�
 注意：这里的路径位置，请大家根据实际的情况自行调整。另外官方网站有两个版本的 jQuery 可供下载：一份是精简过的，另一份是未压缩的（供调试或阅读），请大家根据自己的需要自行选择下载。实验楼课程中可以通过命令下载：
 
 ```js
-wget https://labfile.oss.aliyuncs.com/courses/22/jquery-3.3.1.js
+wget https://labfile.oss-internal.aliyuncs.com/courses/22/jquery-3.3.1.js
 ```
 
 当然如果我们不想把 jQuery 下载到本地，也可以使用 Google 的 CDN 或者使用 Microsoft 的 CDN：

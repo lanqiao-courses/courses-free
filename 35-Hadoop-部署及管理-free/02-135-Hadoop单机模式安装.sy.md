@@ -174,7 +174,7 @@ Hadoop 的下载比较缓慢，为了方便大家进行实验，我们在实验�
 # 进入到家目录 /home/hadoop
 $ cd ~
 
-$ wget https://labfile.oss.aliyuncs.com/hadoop-2.6.0.tar.gz
+$ wget https://labfile.oss-internal.aliyuncs.com/hadoop-2.6.0.tar.gz
 ```
 
 ![图片描述](https://doc.shiyanlou.com/courses/uid977658-20190923-1569208531191/wm)
