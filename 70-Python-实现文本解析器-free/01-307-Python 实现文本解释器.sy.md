@@ -412,7 +412,7 @@ if __name__ == '__main__':
 可以通过下面命令将代码下载并解压到实验环境中，进入相关文件夹中：
 
 ```bash
-wget https://labfile.oss.aliyuncs.com/courses/70/python_markup.zip
+wget https://labfile.oss-internal.aliyuncs.com/courses/70/python_markup.zip
 unzip python_markup.zip
 cd python_markup
 ```

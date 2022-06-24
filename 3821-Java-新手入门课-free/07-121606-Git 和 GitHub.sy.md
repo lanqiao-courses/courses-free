@@ -409,10 +409,10 @@ git clone https://github.com/shiyanlou/gitproject
 3. 进入本地的仓库目录，输入以下命令，下载我们之前的学习脑图（可以用剪切板一口气把四行命令粘贴进去）：
 
 ```bash
-wget https://labfile.oss.aliyuncs.com/courses/1330/linux.png
-wget https://labfile.oss.aliyuncs.com/courses/1330/python1.png
-wget https://labfile.oss.aliyuncs.com/courses/1330/python2.png
-wget https://labfile.oss.aliyuncs.com/courses/1330/git.png
+wget https://labfile.oss-internal.aliyuncs.com/courses/1330/linux.png
+wget https://labfile.oss-internal.aliyuncs.com/courses/1330/python1.png
+wget https://labfile.oss-internal.aliyuncs.com/courses/1330/python2.png
+wget https://labfile.oss-internal.aliyuncs.com/courses/1330/git.png
 ```
 
 4. 使用 `git add --all` 命令，添加仓库内的所有文件

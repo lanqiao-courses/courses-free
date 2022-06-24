@@ -44,8 +44,8 @@ cd /home/shiyanlou/Desktop
 然后再输入命令，下载代码：
 
 ```bash
-wget https://labfile.oss.aliyuncs.com/courses/9/MySQL-04-01.sql
-wget https://labfile.oss.aliyuncs.com/courses/9/MySQL-04-02.sql
+wget https://labfile.oss-internal.aliyuncs.com/courses/9/MySQL-04-01.sql
+wget https://labfile.oss-internal.aliyuncs.com/courses/9/MySQL-04-02.sql
 ```
 
 下载完成后，输入命令开启 MySQL 服务并使用 root 用户登录：

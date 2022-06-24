@@ -85,7 +85,7 @@ $ sudo mkdir bayes
 
 $ cd bayes
 
-$ sudo wget https://labfile.oss.aliyuncs.com/20news-bydate.tar.gz
+$ sudo wget https://labfile.oss-internal.aliyuncs.com/20news-bydate.tar.gz
 
 $ sudo tar zxvf 20news-bydate.tar.gz
 ```

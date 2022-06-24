@@ -73,7 +73,7 @@ var xhr = new ActiveXObject("Microsoft.XMLHTTP");
 在终端中输入以下命令
 
 ```bash
-$ wget https://labfile.oss.aliyuncs.com/courses/1318/server.zip
+$ wget https://labfile.oss-internal.aliyuncs.com/courses/1318/server.zip
 
 $ unzip server.zip
 

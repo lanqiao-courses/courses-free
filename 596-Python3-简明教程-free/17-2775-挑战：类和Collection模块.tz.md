@@ -16,7 +16,7 @@
 
 ```bash
 cd /home/shiyanlou/Code
-wget https://labfile.oss.aliyuncs.com/courses/790/student_teacher.py
+wget https://labfile.oss-internal.aliyuncs.com/courses/790/student_teacher.py
 ```
 
 要求:
