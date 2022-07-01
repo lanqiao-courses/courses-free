@@ -25,6 +25,7 @@ Rust 提供了一个强大的宏系统，可进行元编程（metaprogramming）
 在实验开始之前，我们首先需要安装 rust 开发环境，
 
 ```bash
+sudo apt update
 sudo apt install rustc -y
 ```
 
