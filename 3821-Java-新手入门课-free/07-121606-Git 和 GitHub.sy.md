@@ -69,7 +69,7 @@ enable_checker: true
 
 这个 论文 hub，就是我们今天要学习的 **GitHub** ，只不过论文换成了程序代码。GitHub 大概长这样：
 
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558617168374)
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220819-1660889794053)
 
 **在没有这两个工具时，编程可能是这样的：**
 
