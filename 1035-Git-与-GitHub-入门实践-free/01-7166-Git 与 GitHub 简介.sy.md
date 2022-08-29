@@ -55,17 +55,25 @@ Linux 之父 Linus 在 1991 年创建开源的 Linux 操作系统之后，多年
 
 ## 添加 SSH 关联授权
 
-在 2021 年 8 月 GitHub 更新后，已经不再允许使用账户密码操作 GitHub，必须使用 SSH 密钥登陆。所以我们可以在系统中创建 SSH 公私钥，并将公钥放到 GitHub 指定位置。如此操作即可生成 GitHub 账户对于当前系统中的 Git 授权。
+2021 年 8 月 GitHub 不再允许使用账户密码操作 GitHub，必须使用 SSH 密钥登陆。
+
+2022 年 3 月 15 日，GitHub 又通过删除较旧的不安全密钥类型提高了安全性。
+
+接下来，我们可以在系统中创建 SSH 公私钥，并将公钥放到 GitHub 指定位置。如此操作即可生成 GitHub 账户对于当前系统中的 Git 授权。
+
+在终端执行下面命令，每次询问按回车即可。
+
+```
+ssh-keygen -t ed25519 -C "你的邮箱地址"
+```
 
 终端执行 `ssh-keygen` 命令按几次回车生成公私钥，公私钥存放在主目录下的隐藏目录 `.ssh` 中的两个文件中：
 
-![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756454421.png/wm)
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220829-1661768801543)
 
 将 `~/.ssh/id_rsa.pub` 文件中的公钥内容复制出来，实验环境中可以使用右侧工具栏中的剪切板复制：
 
-![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756470163.png/wm)
-
-![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756481375.png/wm)
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220829-1661769181333)
 
 然后在 GitHub 网页上添加公钥：
 
@@ -73,7 +81,7 @@ Linux 之父 Linus 在 1991 年创建开源的 Linux 操作系统之后，多年
 
 Title 自定义，把剪切板中的内容粘贴到 Key 中，点击绿色按钮添加 SSH Key 即可：
 
-![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756503765.png/wm)
+![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220829-1661769320451)
 
 使用 SSH 的好处主要有两点：
 
