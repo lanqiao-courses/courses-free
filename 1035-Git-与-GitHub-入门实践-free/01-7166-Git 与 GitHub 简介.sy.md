@@ -71,7 +71,7 @@ ssh-keygen -t ed25519 -C "你的邮箱地址"
 
 ![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220829-1661768801543)
 
-将 `~/.ssh/id_rsa.pub` 文件中的公钥内容复制出来，实验环境中可以使用右侧工具栏中的剪切板复制：
+将 `~/.ssh/id_ed25519.pub` 文件中的公钥内容复制出来，实验环境中可以使用右侧工具栏中的剪切板复制：
 
 ![图片描述](https://dn-simplecloud.shiyanlou.com/questions/uid810810-20220829-1661769181333)
 
