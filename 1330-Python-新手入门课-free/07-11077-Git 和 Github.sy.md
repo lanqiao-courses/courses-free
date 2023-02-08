@@ -203,238 +203,45 @@ Title 自定义，把剪切板中的内容粘贴到 Key 中，点击绿色按钮
 - 免密码推送，执行 `git push` 时不再需要输入用户名和密码了；
 - 提高数据传输速度。它不是必须的，比如在课程中挑战环境是不可保存的，一次性的，这种环境就没有必要创建 SSH 了，因为相较好处来说，还是太麻烦了。
 
-### 创建文件
+## 克隆 GitHub 上的仓库到本地
 
-下面，让我们在本地新建一个文件，最后上传到刚刚创建的仓库中。
+现在克隆前面我们在 GitHub 上创建的仓库，使用 `git clone + [仓库地址]` 命令即可，这是标准的克隆仓库命令。
 
-现在的你在 Linux 中创建文件，应该很轻车熟路了吧：
+回到仓库主目录，点击下图所示的绿色按钮，点击紫色框中的 “Use SSH”，然后复制这个链接。
 
-```bash
-mkdir Demo
-cd Demo
-gedit README.md
-```
+**重要的一点：只有使用这种 git 开头的地址克隆仓库，SSH 关联才会起作用。**
 
-然后在打开的文件中输入 `#Demo`，保存文件后关闭 gedit 。
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid600404labid9816timestamp1549876495736.png/wm)
 
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558597024894)
+在实验环境里删除原仓库，使用此链接重新克隆仓库。克隆仓库是需要确认连接，输入 yes 即可：
 
-用 `cat` 命令查看一下文件内容：
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid9816timestamp1548756521858.png/wm)
 
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558597073053)
+进入仓库主目录，如下图所示，仓库主目录中有个 `.git` 隐藏目录，它里面包含了仓库的全部信息，删掉这个目录，仓库就变成普通的目录了。进入到仓库目录中，命令行前缀发生了一些变化，出现了红色的 master ，它就是当前所在的分支名：
 
-创建文件 OK 了，但现在，Demo 目录还只是一个普通的目录，我们如何用 `Git` 来控制这个目录？
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid7166timestamp1548755685917.png/wm)
 
-你只需在 Demo 目录中，输入 `git init` 即可。
+当我们在 GitHub 上创建一个仓库时，同时生成了仓库的默认主机名 origin，并创建了默认分支 master。GitHub 可以看成是免费的 Git 服务器，在 GitHub 上创建仓库，会自动生成一个仓库地址，主机就是指代这个仓库，主机名就等于这个仓库地址。克隆一个 GitHub 仓库（也叫远程仓库）到本地，本地仓库则会自动关联到这个远程仓库，执行 `git remote -v` 命令可以查看本地仓库所关联的远程仓库信息：
 
-```bash
-git init
-```
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid7166timestamp1548755698081.png/wm)
 
-这是 `Git` 的初始化操作，作用是**将一个已存在文件夹，置于 Git 的控制管理之下。**
+Git 要求对本地仓库关联的每个远程主机都必须指定一个主机名（默认为 origin），用于本地仓库识别自己关联的主机，`git remote` 命令就用于管理本地仓库所关联的主机，一个本地仓库可以关联任意多个主机（即远程仓库）。
 
-再 `ls -la` 命令，会发现一个名叫 .git 的目录被创建了，这意味着仓库初始化成功。可以进入到 .git 目录查看下有哪些内容。
+克隆远程仓库到本地时，还可以使用 `-o` 选项修改主机名，在地址后面加上一个字段作为本地仓库的主目录名，举例如下：
 
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558598663328)
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid7166timestamp1548755710736.png/wm)
 
-### 提交代码
+另一个在其它 Git 教程中常见的命令 `git init` ，它会把当前所在目录变成一个本地仓库，因为有 GitHub 的存在，这个命令在我们的生产生活中用到的次数应该是零，除非你想费时费力自己搭建服务器。操作截图如下：
 
-Git 提交代码的基本流程是这样的：
+![此处输入图片的描述](https://doc.shiyanlou.com/document-uid310176labid7166timestamp1548755742879.png/wm)
 
-- 创建或修改 **本地文件**
-- 使用 **git add** 命令，将创建或修改的文件添加到本地的 **暂存区**，这里保存的是你的临时更改
-- 使用 **git commit** 命令，提交文件到 **本地仓库**
-- 使用 **git push** 命令，将本地代码库同步到 **远端仓库**
+## 实验总结
 
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558600871270)
+本节实验主要介绍了以下知识点：
 
-目前为止，我们实现了第一步，创建了一个文件，我们的**最终目标是**：将本地的 Demo 仓库，同步到 GitHub 上的 Demo 仓库中。
+- Git 和 GitHub 的来历
+- 使用 GitHub 创建仓库
+- 安装 / 更新 Git
+- 使用 Git 克隆远程仓库到本地
 
-#### 💡 git add
-
-使用 `git add + 文件名/目录名` 命令，可以将你需要同步的文件，添加到本地的暂存区。我们先进入 Demo 目录，然后把 README.md 文件添加一下：
-
-```bash
-cd /home/shiyanlou/Demo
-git add README.md
-```
-
-输入 `git status` ，可以检测当前目录和暂存区的状态，查看哪些修改被暂存了：
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558601543864)
-
-可以看到我们刚刚 `add` 的文件已经被初始提交了。
-
-#### 💡 git commit
-
-`git commit` 提交是你工作的一个里程碑 —— **每当你完成一些工作，都可以创建一次提交，保存当前的版本。**
-
-这样一来，无论你何时修改了文件，都创建一个新版本的文件，你可以很方便地查看以往所有版本的文件和内容。
-
-**在提交之前，你必须先设置你的名字和 email**，这是你在提交 commit 时的签名，每次提交记录里都会包含这些信息。
-
-使用 git config 命令进行配置：
-
-```bash
-git config --global user.name "YourName"
-git config --global user.email "YourEmail@xxx.com"
-```
-
-完成配置后，我们可以创建提交了，请输入：
-
-```bash
-git commit -m "first commit"
-```
-
-`commit` 的语法结构是 `git commit -m "注释"`，通过上个命令，你创建了一条注释为 “first commit” 的 Git 提交。
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558603780044)
-
-**⚠️ 注意：**
-
-每次提交，你都必须用 `-m + '注释'` 编辑注释信息 。它不仅能协助我们辨别不同的版本，而且能让你理解，自己当时对文件做了什么修改。
-
-比如当你每次在文件中添加了新的代码后，你可以写一句提交信息：“添加了 XXX 代码” —— 当你一个月后回来看提交记录或者 Git 日志 时，你还能知道当时做了什么。
-
-### 与 GitHub 仓库同步
-
-终于到了激动人心的时刻，我们要把本地仓库提交到远端仓库（即 GitHub 仓库）中。
-
-#### 💡 连接 GitHub 仓库
-
-使用如下命令，将本地仓库连接到 GitHub 仓库中：
-
-```bash
-git remote add origin 仓库链接
-```
-
-仓库链接请在这里复制，并用剪切板功能粘贴进去：
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558606913216)
-
-我们分析一下这个命令，首先 **remote** 的意思是**远程**：
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558607126461)
-
-`add` 很容易明白 —— 添加。`git remote add` 表示通知 Git 去添加一个远程仓库，后面接上的 `origin` 是这个仓库的小名，方便以后沟通，通常默认用 `origin` 来表示；最后再接上远程仓库的地址，即你刚刚创建的 GitHub 仓库链接。
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558607911486)
-
-#### 💡 push 命令
-
-**`push`** 顾名思义，就是推送， 使用 **`push`** 可以把本地仓库推送到远端仓库中。
-
-具体命令如下：
-
-```bash
-git push origin master
-```
-
-执行后，GitHub 服务器会验证你的身份，完成 push 同步。因为我们已经配置了 SSH，该过程会自动完成。
-
-**目前国内网络访问 GitHub 不太稳定，如果遇到连接失败，可以多尝试几次。**
-
-接下来就是见证奇迹的时刻 —— 再刷新你的 GitHub 仓库，就会发现多了这些东西：
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558609348514)
-
-💡**分支的概念**：分支在多人协作中经常会被用到，但前期我们用不到这个功能，为了不给你增加认知负担，这里就先不讲了。你只需知道 Git 管理的项目进程中，有一条默认的主分支 - `master` 即可。（想象 Git 是一棵树，`master` 就是树干，树干上还可以生出很多分支来，如 master 2.0、master 3.0 等）
-
-### 克隆 GitHub 上的仓库
-
-本节实验最后一个知识点是 `git clone` 命令，它可以帮你拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558610914428)
-
-如果你想要复制一个项目，看看代码，或者把自己的远程仓库复制到本地，可以执行命令：
-
-```bash
-git clone [url]
-```
-
-[url] 指的就是你想复制的仓库，我们在 `github.com` 上提供了一个名字为 `gitproject` 的公开仓库， 供大家测试，现在你要把这个仓库复制到实验环境中，只需输入：
-
-```bash
-cd /home/shiyanlou/
-git clone https://github.com/shiyanlou/gitproject
-```
-
-操作完成后，会发现 /home/shiyanlou 目录下多了一个 gitproject 文件夹，这个文件夹里的内容就是我们刚刚 clone 下来的代码。
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558611764793)
-
-关于 `Git` 的常用操作我们就学到这里，如果你想学习 `Git` 的更多操作，可以学习以下课程：
-
-[**Git 与 GitHub 入门实践（免费）**](https://www.lanqiao.cn/courses/1035)
-
-[**Git 实战教程 （免费）**](https://www.lanqiao.cn/courses/4)
-
-```checker
-- name: 检查是否已经clone
-  script: |
-    #!/bin/bash
-    ls /home/shiyanlou/gitproject
-  error: |
-    没有发现 git clone 后创建的目录 /home/shiyanlou/gitproject
-```
-
-## 总结
-
-回顾一下本节实验学到的内容：
-
-- 版本控制
-- Git 和 GitHub 的历史
-- 在 GitHub 创建仓库
-- 添加修改到暂存区
-- 提交代码
-- 同步远程仓库
-
-**之后，请你把这些操作整理在脑图中，类似这样：**
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190523-1558613911512)
-
-**🔥 综合练习**
-
-现在有 GitHub 账户，为何不把这几天的学习记录下来呢？
-
-你可以在 GitHub 中新开一个仓库，起名为「Louplus」，然后把这几天的笔记或脑图都放进去，这样做的好处是：
-
-- 方便之后查阅
-- 漂亮的学习记录，可以激励你以后的学习
-- 这将是你未来求职最好的证明
-
-我们为你准备了四张从 Linux 到 Python 到 Git 的学习脑图，请你试着用今天学到的内容，上传到 `Louplus` 的仓库中:
-
-**💡 步骤:**
-
-1. 在 `GitHub` 的个人主页中新建一个仓库，命名为 `Louplus`
-
-2. 复制仓库链接，在实验环境中，将该仓库克隆到本地
-   ![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190524-1558684946974)
-
-3. 进入本地的仓库目录，输入以下命令，下载我们之前的学习脑图（可以用剪切板一口气把四行命令粘贴进去）：
-
-```bash
-wget https://labfile.oss-internal.aliyuncs.com/courses/1330/linux.png
-wget https://labfile.oss-internal.aliyuncs.com/courses/1330/python1.png
-wget https://labfile.oss-internal.aliyuncs.com/courses/1330/python2.png
-wget https://labfile.oss-internal.aliyuncs.com/courses/1330/git.png
-```
-
-4. 使用 `git add --all` 命令，添加仓库内的所有文件
-
-5. 使用 `git commit`、`git remote`、`git push` 命令，将本地仓库同步到 GitHub 中
-
-完成后，再次刷新你的 `GitHub` 仓库，4 张图片就这么被上传了～
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190524-1558685949102)
-
-**最后，不要忘了做我们的最终挑战～**
-
-**最终挑战很简单**：请你把上个挑战完成的代码文件，传到自己的 `GitHub` 上。
-
-**最终挑战也很重要**：从现在开始，就请养成良好的**代码上传习惯**，不管是学习中的代码、挑战中的代码，都可以上传到 GitHub 上，你的代码仓库将是你未来的财富。
-
-胜利就在前方，加油 ～
-
-![图片描述](https://doc.shiyanlou.com/courses/uid8504-20190514-1557810582507)
+本节主要介绍了 Git 与 GitHub 概述，以及创建仓库、克隆仓库到本地的基本操作，相对比较简单。大家在学习时重复操作几次即可熟练掌握。下一节将学习 Git 的使用流程，完成一次修改、提交、推送操作。
