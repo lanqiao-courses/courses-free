@@ -235,7 +235,7 @@ div 元素布局：
 源码如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

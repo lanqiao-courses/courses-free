@@ -51,7 +51,7 @@ JavaScript 是一种脚本语言。学一种编程语言，首先就要从这种
 首先来看看范例代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -76,7 +76,7 @@ JavaScript 是一种脚本语言。学一种编程语言，首先就要从这种
 通过上面的代码，我们可以看出 JavaScript 代码是放在 `<script>……</script>` 标签里，而包含 JavaScript 代码的 script 标签，我们可以放在 `<body>……</body>` 标签里，也可以放在 `<head>……</head>` 标签里。比如上述范例也可以这样写：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -98,7 +98,7 @@ console.log("hello world");
 在 html 文件中写上如下代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />

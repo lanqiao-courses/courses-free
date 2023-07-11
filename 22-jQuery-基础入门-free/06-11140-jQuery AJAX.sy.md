@@ -175,7 +175,7 @@ xhr.onreadystatechange = function () {
 下面我们给出一个原生的 AJAX 请求示例，在 /project 下新建一个 index.html 文件，键入以下内容，后续给出的示例都按这种方式操作。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -238,7 +238,7 @@ load(url, [data], [callback]);
 下面这个示例加载了一个 html 文件到页面中来
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -263,7 +263,7 @@ load(url, [data], [callback]);
 我们只使用了参数 url，你可以将其它参数加入进来查看效果，例如加入回调函数：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -280,7 +280,7 @@ load(url, [data], [callback]);
           "https://042bc5dd9bf0.simplelab.cn/load.html",
           function (response, status, xhr) {
             alert(status);
-          }
+          },
         );
       });
     </script>
@@ -322,7 +322,7 @@ $.ajax({
 下面是一个简单的 get() 方法的示例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -386,7 +386,7 @@ $.ajax({
 下面是一个简单的 post 的示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -409,7 +409,7 @@ $.ajax({
             data,
             function (result) {
               alert(result);
-            }
+            },
           );
         });
       });
@@ -434,7 +434,7 @@ var data = {
 你可能已经发现了，post 和 get 方法只存在方法名的区别。另外，当 load() 方法带有参数传递的时候，会使用 POST 方式发送请求，因此，上述代码我们可以使用 load 来改写：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -458,7 +458,7 @@ var data = {
             data,
             function (result) {
               alert(result);
-            }
+            },
           );
         });
       });
@@ -498,7 +498,7 @@ $.ajax({
 下面我们来看一个简单的示例，通过 \$.getScript() 方法来动态的加载一段 js 脚本。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -559,7 +559,7 @@ $.ajax({
 下面给出一个简单的示例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -590,9 +590,9 @@ $.ajax({
                   data[2].id +
                   " " +
                   data[2].name +
-                  "\n"
+                  "\n",
               );
-            }
+            },
           );
         });
       });
@@ -635,7 +635,7 @@ options 是一个 `{}`,里面包含了 ajax 请求的参数，我们之前介绍
 下面给出一个 ajax 方法的示例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
