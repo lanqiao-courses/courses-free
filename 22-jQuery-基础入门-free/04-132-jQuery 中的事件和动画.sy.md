@@ -150,7 +150,7 @@ $(selector).on(event,childSelector,data,function)
 示例：为 li 元素绑定 click 事件
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -185,7 +185,7 @@ $(selector).on(event,childSelector,data,function)
 示例：将上节事件绑定的例子简写绑定事件
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -230,7 +230,7 @@ $(selector).hover(inFunction, outFunction);
 示例：当鼠标移动到 li 上时字体大小变成 24px，移开变为 14px。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -255,7 +255,7 @@ $(selector).hover(inFunction, outFunction);
             $(this).css({
               "font-size": "14px",
             });
-          }
+          },
         );
       });
     </script>
@@ -280,7 +280,7 @@ $(selector).hover(inFunction, outFunction);
 来看个例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -339,7 +339,7 @@ $("element").on("click", function (event) {
 - 停止事件冒泡：停止事件冒泡可以阻止事件中其他对象的事件处理函数被执行，在 jQuery 中提供了 `event.stopPropagation()` 方法来停止冒泡。使用 `event.isPropagationStopped()` 方法来检查指定的事件上是否调用了该方法，如果 `event.stopPropagation()` 被调用则该方法返回 true，否则返回 false。前面的例子可以改写为：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -380,7 +380,7 @@ $("element").on("click", function (event) {
 例子：阻止链接打开 url
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -417,7 +417,7 @@ jQuery 在遵循 W3C 规范的情况下，对事件对象的常用属性进行�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -451,7 +451,7 @@ jQuery 在遵循 W3C 规范的情况下，对事件对象的常用属性进行�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -486,7 +486,7 @@ jQuery 在遵循 W3C 规范的情况下，对事件对象的常用属性进行�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -575,7 +575,7 @@ $(selector).off(event,selector,function(eventObj),map)
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -622,7 +622,7 @@ $(selector).one(event,data,function)
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -670,7 +670,7 @@ $(selector).trigger(event,param1,param2,...)
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -793,7 +793,7 @@ $("input").trigger("focus");
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -871,7 +871,7 @@ $(selector).hide(speed, easing, callback);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -933,7 +933,7 @@ $(selector).fadeOut(speed, easing, callback);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -993,7 +993,7 @@ $(selector).slideDown(speed, easing, callback);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1058,7 +1058,7 @@ $(selector).animate({ params }, speed, callback);
 示例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1081,7 +1081,7 @@ $(selector).animate({ params }, speed, callback);
           {
             left: "500px",
           },
-          3000
+          3000,
         );
       });
     </script>
@@ -1100,7 +1100,7 @@ $(selector).animate({ params }, speed, callback);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1125,7 +1125,7 @@ $(selector).animate({ params }, speed, callback);
             height: "+=150px",
             width: "+=150px",
           },
-          3000
+          3000,
         );
       });
     </script>
@@ -1144,7 +1144,7 @@ $(selector).animate({ params }, speed, callback);
 - 按顺序执行多个动画。我们只需要把上面的代码拆开即可，然后按照顺序写就可以了。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1167,19 +1167,19 @@ $(selector).animate({ params }, speed, callback);
           {
             left: "500px",
           },
-          3000
+          3000,
         );
         $(".title").animate(
           {
             height: "+=150px",
           },
-          3000
+          3000,
         );
         $(".title").animate(
           {
             width: "+=150px",
           },
-          3000
+          3000,
         );
       });
     </script>
@@ -1194,7 +1194,7 @@ $(selector).animate({ params }, speed, callback);
 因为 `animate()` 方法都是对同一个 jQuery 对象进行操作，所以也可以改成链式的写法，代码如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1218,19 +1218,19 @@ $(selector).animate({ params }, speed, callback);
             {
               left: "500px",
             },
-            3000
+            3000,
           )
           .animate(
             {
               height: "+=150px",
             },
-            3000
+            3000,
           )
           .animate(
             {
               width: "+=150px",
             },
-            3000
+            3000,
           );
       });
     </script>
@@ -1245,7 +1245,7 @@ $(selector).animate({ params }, speed, callback);
 在前面动画参数的说明中我们提到了一个 callback 回调函数，那么它到底是用来干什么的呢？来看个例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1279,7 +1279,7 @@ $(selector).animate({ params }, speed, callback);
 使用回调函数：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1336,7 +1336,7 @@ $(selector).stop( [clearQueue ] [, jumpToEnd ] )
 只停止当前正在进行的动画，停止当前动画后，队列中的下一个动画开始进行：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1414,7 +1414,7 @@ $(selector).delay(speed, queueName);
 使用 `delay()` 方法来设置不同的速度值。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

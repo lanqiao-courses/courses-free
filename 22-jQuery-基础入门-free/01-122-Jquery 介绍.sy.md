@@ -309,7 +309,7 @@ $(document).ready(function () {
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -345,7 +345,7 @@ $(document).ready(function () {
 良好的代码风格使得代码更加具有可读性，适当的注释代码，对于日后代码的维护也是非常有利的。来看个例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -527,7 +527,7 @@ var $cr = $(cr); //jQuery 对象
 DOM 方式判断复选框是否被选中：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -558,7 +558,7 @@ DOM 方式判断复选框是否被选中：
 jQuery 方式判断复选框是否被选中：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -624,7 +624,7 @@ noConflict() 方法会释放对 \$ 标识符的控制，这样其他脚本就可
 我们也可以创建自己的简写。noConflict() 可返回对 jQuery 的引用，我们可以把它存入变量，以供稍后使用：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -650,7 +650,7 @@ noConflict() 方法会释放对 \$ 标识符的控制，这样其他脚本就可
 如果你的 jQuery 代码块使用 \$ 简写，并且您不愿意改变这个快捷方式，那么您可以把 \$ 符号作为变量传递给 ready 方法。这样就可以在函数内使用 \$ 符号了，而在函数外，依旧不得不使用 "jQuery"：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

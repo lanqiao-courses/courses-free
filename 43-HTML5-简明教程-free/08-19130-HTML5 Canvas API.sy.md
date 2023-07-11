@@ -78,7 +78,7 @@ ctx.fillRect(0, 0, 100, 100);
 整体的代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -128,7 +128,7 @@ ctx.fillRect(0, 0, 100, 100);
 绘制一条直线例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -170,7 +170,7 @@ ctx.fillRect(0, 0, 100, 100);
 绘制三角形例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -238,7 +238,7 @@ ctx.rect(x,y,width,height);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -282,7 +282,7 @@ ctx.strokeRect(x, y, width, height);
 前面绘制矩形的例子也可以这样写：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -320,7 +320,7 @@ ctx.fillRect(x, y, width, height);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -362,7 +362,7 @@ ctx.clearRect(x, y, width, height);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -418,7 +418,7 @@ ctx.arc(x, y, r, sAngle, eAngle, counterclockwise);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -454,7 +454,7 @@ ctx.arc(x, y, r, sAngle, eAngle, counterclockwise);
 当然绘制扇形也很简单，只需要给定角度值小于 `2 * Math.PI` 再闭合一下就可以了，来看看例子。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -512,7 +512,7 @@ ctx.fillStyle = color | gradient | pattern;
 绘制实心矩形，填充颜色为红色。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -578,7 +578,7 @@ gradient.addColorStop(stop, color);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -639,7 +639,7 @@ ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -692,7 +692,7 @@ ctx.fill();
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -746,7 +746,7 @@ ctx.fillText(text, x, y, maxWidth);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -788,7 +788,7 @@ ctx.strokeText(text, x, y, maxWidth);
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -848,7 +848,7 @@ ctx.textAlign = "center|end|left|right|start";
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -922,7 +922,7 @@ ctx.textBaseline = "alphabetic|top|hanging|middle|ideographic|bottom";
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -1039,7 +1039,7 @@ ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 例子 1，在画布上定位图像并作出一个立体的效果：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -1081,7 +1081,7 @@ ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 例子 2，在画布上定位图像，并规定图像的宽度和高度：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -1120,7 +1120,7 @@ ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height);
 例子 3，剪切图像，并在画布上定位被剪切的部分：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />

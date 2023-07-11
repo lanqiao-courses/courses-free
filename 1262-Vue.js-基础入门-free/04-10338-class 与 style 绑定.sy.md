@@ -27,7 +27,7 @@ enable_checker: true
 给 `v-bind:class` 一个对象，以动态地切换 class，语法表示 `active` 这个 class 存在与否将取决于数据属性 `isActive` 的 Boolean 值，大致语法 {className:Boolean}
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -72,7 +72,7 @@ enable_checker: true
 你可以在对象中传入更多属性来动态切换多个 class，`v-bind:class` 指令也可让普通的 class 并存。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -121,7 +121,7 @@ enable_checker: true
 我们可以把一个数组传给 `v-bind:class`，以应用一个 class 列表：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -174,7 +174,7 @@ enable_checker: true
 使用对象方式绑定 style
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -208,7 +208,7 @@ enable_checker: true
 直接绑定到一个样式对象通常更好，这会让模板更清晰，和上面一个例子是同样的效果：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -242,7 +242,7 @@ enable_checker: true
 `v-bind:style` 的数组语法可以将多个样式对象应用到同一个元素上
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -294,7 +294,7 @@ enable_checker: true
 动态改变 style 和 切换 class，案例：变大变色
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

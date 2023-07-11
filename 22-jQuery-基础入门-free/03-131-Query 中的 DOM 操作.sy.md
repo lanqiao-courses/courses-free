@@ -114,7 +114,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 示例：将新建的 li 元素插入到 ul 中
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -172,7 +172,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 插入节点示例：将新建的 li 元素插入到 ul 中
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -201,7 +201,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 移动节点示例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -243,7 +243,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -280,7 +280,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -313,7 +313,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -349,7 +349,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 另外 `remove()` 方法也可以通过传递参数来选择性的删除元素。比如：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -384,7 +384,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 示例：点击 li 元素即可复制其本身到 ul 中
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -425,7 +425,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 示例：替换 p 元素
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -462,7 +462,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 用一个有边框的 DIV 将 P 元素包裹起来
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -494,7 +494,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -524,7 +524,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -560,7 +560,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 示例：获取 P 元素的 class 属性值，并追加到 div 中
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -591,7 +591,7 @@ var $li = $("<li title='syl'>syl</li>"); //创建一个<li>元素,包括元素�
 示例：设置 div 的 class 值
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -632,7 +632,7 @@ $("div").attr({ class: "demo", name: "test" }); //将一个 “名/值” 形式
 示例：删除 div 的 class
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -715,7 +715,7 @@ HTML 代码：
 示例：为 div 追加一个新样式 another
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -760,7 +760,7 @@ HTML 代码：
 示例：移除 div 的 another 样式
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -811,7 +811,7 @@ $("div").removeClass(); //删除<div>元素的所有class
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -860,7 +860,7 @@ $("p").hasClass("another");
 示例：获取 div 中的 HTML 内容
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -886,7 +886,7 @@ $("p").hasClass("another");
 示例：设置 div 中的 HTML 内容
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -915,7 +915,7 @@ $("p").hasClass("another");
 示例：获取 div 元素的文本内容
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -941,7 +941,7 @@ $("p").hasClass("another");
 示例：设置 div 中的文本内容
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -970,7 +970,7 @@ $("p").hasClass("another");
 示例：设置输入框的值
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1005,7 +1005,7 @@ $("p").hasClass("another");
 示例：获取 ul 的子元素 li 的文本值
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1045,7 +1045,7 @@ $("p").hasClass("another");
 示例：获取 div 后面紧邻的同辈元素
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1080,7 +1080,7 @@ $("p").hasClass("another");
 示例：获取 p 前面紧邻的同辈元素
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1115,7 +1115,7 @@ $("p").hasClass("another");
 示例：改变 p 元素前后所有的同辈元素的颜色
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1152,7 +1152,7 @@ $("p").hasClass("another");
 示例：获取 p 元素的父级元素的 class
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1202,7 +1202,7 @@ CSS-DOM 技术简单来说就是读取和设置 style 对象的各种属性。
 示例：获取 div 的背景颜色
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1230,7 +1230,7 @@ CSS-DOM 技术简单来说就是读取和设置 style 对象的各种属性。
 示例：为 div 设置边框和高度属性
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1265,7 +1265,7 @@ $("p").css("opacity", "0.5");
 示例：获取 div 的高度和宽度
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
