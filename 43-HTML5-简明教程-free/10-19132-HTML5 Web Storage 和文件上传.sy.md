@@ -335,7 +335,7 @@ var state = instanceOfFileReader.readyState;
 例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

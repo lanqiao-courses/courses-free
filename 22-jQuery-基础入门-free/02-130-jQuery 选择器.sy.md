@@ -56,7 +56,7 @@ enable_checker: true
 - 完善的处理机制。使用 jQuery 选择器不仅比使用传统的 DOM 对象方法简洁得多，而且还能避免某些错误，比如：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -80,7 +80,7 @@ enable_checker: true
 改进一下后的代码如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -102,7 +102,7 @@ enable_checker: true
 这样就不会报错了，但是如果要操作的元素很多，对每个元素都进行一次判断，显然是不合理的，不判断的话，以后因为某种原因删除了网页上某个以前使用的元素，再来改也会很麻烦，而使用 jQuery 选择器的话，则不用担心这个问题：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -159,7 +159,7 @@ if ($("#syl")[0]) {
 选择 id 为 demo 的元素，并为此元素设置长、宽、背景色。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -195,7 +195,7 @@ if ($("#syl")[0]) {
 选择 class 为 demo 的元素，并为此元素设置长、宽、背景色。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -229,7 +229,7 @@ if ($("#syl")[0]) {
 选择所有 div 元素,并为所有元素设置长、宽、背景色。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -262,7 +262,7 @@ if ($("#syl")[0]) {
 选择页面所有元素，包括 body。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -302,7 +302,7 @@ if ($("#syl")[0]) {
 选择页面所有元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -341,7 +341,7 @@ if ($("#syl")[0]) {
 选择类名为 demo 的元素的所有后代 a 元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -385,7 +385,7 @@ if ($("#syl")[0]) {
 选择类名为 demo 的子元素 a，并设置字体大小。（此时只有第一个 a 元素的字体会改变）
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -423,7 +423,7 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
 选中 class 为 demo 后面的 a 元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -460,7 +460,7 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
 选中 class 为 demo 的 div 元素后面的所有 a 同辈元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -564,7 +564,7 @@ prev 和 next 是两个同级别的元素，选中在 prev 元素后面的 next 
 示例：选取所有的 input 元素，并设置高度。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -649,7 +649,7 @@ $("#form1 :text").lenth;
 示例：选取所有的 input 元素中的第一个 input 元素，并设置高度。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -691,7 +691,7 @@ $("#form1 :text").lenth;
 示例：选取包含文本“shiyanlou”的 div 元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -729,7 +729,7 @@ $("#form1 :text").lenth;
 示例：选取所有可见的 div 元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -781,7 +781,7 @@ $("#form1 :text").lenth;
 示例：选取拥有 class 属性的 div 元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -833,7 +833,7 @@ $("#form1 :text").lenth;
 示例：选取类名为 demo 的元素的第一个子 div 元素，并设置字体大小。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -875,7 +875,7 @@ $("#form1 :text").lenth;
 示例：选择被选中元素，并设置宽度。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

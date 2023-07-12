@@ -402,7 +402,7 @@ myButton.onclick = function () {
 参考源码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
