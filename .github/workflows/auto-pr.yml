@@ -18,7 +18,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           branch: product-promotion
-          reviewers: huhuhang
+          reviewers: yanwydxf
           title: "自动同步文档到蓝桥云课"
           labels: 自动同步
           body: |
