@@ -12,7 +12,7 @@ enable_checker: true
 
 本节实验将带领大家了解 jQuery 的定义，它有什么作用，我们为什么要学它，以及如何使用它，它的语法是什么，最后对比了 jQuery 对象和 DOM 对象的区别。
 
-> 由于实验楼使用是 WebIDE 的在线环境，所以有不熟悉对同学请阅读：[实验楼 WebIDE 使用指南](https://www.lanqiao.cn/library/shiyanlou-docs/feature/webide.md) 的前端部分。
+> 由于实验楼使用是 WebIDE 的在线环境，所以有不熟悉对同学请阅读：[实验楼 WebIDE 使用指南](https://www.lanqiao.cn/library/shiyanlou-docs/feature/webide) 的前端部分。
 
 #### 1.2 实验知识点
 
@@ -119,7 +119,7 @@ Bootstrap 发布了最新版本 4.3.0(https://blog.getbootstrap.com/2019/02/11/b
 
 #### 3.1 jQuery 的辉煌
 
-jQuery 最初诞生于 2006 年 8 月，作者是 John Resig（https://zh.wikipedia.org/wiki/JQuery）。10 多年前，网页开发者（当时还没有“前端”这个概念）深受浏览器不兼容性之苦。以 jQuery 为代表的一批 JavaScript 库/框架应运而生。
+jQuery 最初诞生于 2006 年 8 月，作者是 John Resig。10 多年前，网页开发者（当时还没有“前端”这个概念）深受浏览器不兼容性之苦。以 jQuery 为代表的一批 JavaScript 库/框架应运而生。
 
 jQuery 官网是这样描述的：
 
@@ -202,7 +202,7 @@ jQuery 强调的理念就是写的少，做的多（write less,do more）。它�
 注意：这里的路径位置，请大家根据实际的情况自行调整。另外官方网站有两个版本的 jQuery 可供下载：一份是精简过的，另一份是未压缩的（供调试或阅读），请大家根据自己的需要自行选择下载。实验楼课程中可以通过命令下载：
 
 ```js
-wget https://labfile.oss-internal.aliyuncs.com/courses/22/jquery-3.3.1.js
+wget https://labfile.oss.aliyuncs.com/courses/22/jquery-3.3.1.js
 ```
 
 当然如果我们不想把 jQuery 下载到本地，也可以使用 Google 的 CDN 或者使用 Microsoft 的 CDN：
