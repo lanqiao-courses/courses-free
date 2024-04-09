@@ -16,15 +16,14 @@ enable_checker: true
 >
 > 本实验是对前述实验的延续，如果直接点“开始实验”进入则需要按实验 1 的方法配置并启动 hadoop。
 >
-> 实验使用的安装包、代码和数据均在 `/home/shiyanlou/install-pack` 目录下。
 
-部署节点操作系统为 CentOS，防火墙和 SElinux 禁用，创建了一个 shiyanlou 用户并在系统根目录下创建 `/app` 目录，用于存放 Hadoop 等组件运行包。因为该目录用于安装 hadoop 等组件程序，用户对 shiyanlou 必须赋予 rwx 权限（一般做法是 root 用户在根目录下创建 `/app` 目录，并修改该目录拥有者为 shiyanlou(`chown –R shiyanlou:shiyanlou /app`)。
+部署节点操作系统为 Ubuntu，防火墙和 SElinux 禁用，创建了一个 shiyanlou 用户并在系统根目录下创建 `/opt` 目录，用于存放 Hadoop 等组件运行包。因为该目录用于安装 hadoop 等组件程序，用户对 shiyanlou 必须赋予 rwx 权限（一般做法是 root 用户在根目录下创建 `/opt` 目录，并修改该目录拥有者为 shiyanlou(`chown –R shiyanlou:shiyanlou /opt`)。
 
 **Hadoop 搭建环境：**
 
-- 虚拟机操作系统： CentOS 64 位，单核，1G 内存
-- JDK：64 位
-- Hadoop：1.1.2
+- 虚拟机操作系统：Ubuntu 64 位，4 核，16G 内存
+- JDK：1.8.0_292 64 位
+- Hadoop：2.9.2
 
 #### 知识点
 
@@ -176,29 +175,43 @@ public class MinTemperatureReducer extends Reducer<Text, IntWritable, Text, IntW
 
 ### 实现过程
 
-配置本机主机名为 hadoop，`sudo` 时需要输入 shiyanlou 用户的密码。将 hadoop 添加到最后一行的末尾。
+使用如下命令启动 Hadoop：
 
 ```bash
-sudo vim /etc/hosts
-# 将hadoop添加到最后一行的末尾，修改后类似：（使用 tab 键添加空格）
-# 172.17.2.98 f738b9456777 hadoop
-ping hadoop
-```
-
-使用如下命令启动 Hadoop
-
-```bash
-cd /app/hadoop-1.1.2/bin
-./start-all.sh
-jps # 查看启动的进程，确保 NameNode 和 DataNode 都有启动
+# 启动 Hadoop
+start-all.sh
+# 查看启动的进程，确保 NameNode 和 DataNode 都有启动
+jps 
 ```
 
 **编写代码**
 
-进入 `/app/hadoop-1.1.2/myclass` 目录，在该目录中建立 `MinTemperature.java`、`MinTemperatureMapper.java` 和 `MinTemperatureReducer.java` 代码文件，执行命令如下：
+```bash
+# 创建目录
+cd /opt/hadoop-2.9.2
+mkdir myclass
+```
+
+**配置本地环境**
+
+对 `/opt/hadoop-2.9.2/conf` 目录中的 `hadoop-env.sh` 进行配置，如下所示：
 
 ```bash
-cd /app/hadoop-1.1.2/myclass/
+cd /opt/hadoop-2.9.2/etc/hadoop
+vi hadoop-env.sh
+```
+
+加入 HADOOP_CLASSPATH 变量，值为 `/opt/hadoop-2.9.2/myclass`，设置完毕后编译该配置文件，使配置生效。
+
+```bash
+export HADOOP_CLASSPATH=/opt/hadoop-2.9.2/myclass
+```
+![图片描述](https://doc.shiyanlou.com/courses/237/2505524/fd9520dc730a71c8cd66fcbbe5a4a36c-0)
+
+进入 `/opt/hadoop-2.9.2/myclass` 目录，在该目录中建立 `MinTemperature.java`、`MinTemperatureMapper.java` 和 `MinTemperatureReducer.java` 代码文件，执行命令如下：
+
+```bash
+cd /opt/hadoop-2.9.2/myclass/
 vi MinTemperature.java
 vi MinTemperatureMapper.java
 vi MinTemperatureReducer.java
@@ -206,25 +219,25 @@ vi MinTemperatureReducer.java
 
 `MinTemperature.java`：
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404351252/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404351252)
 
 `MinTemperatureMapper.java`：
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404364542/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404364542)
 
 `MinTemperatureReducer.java`:
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404376152/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404376152)
 
 **编译代码**
 
-在 `/app/hadoop-1.1.2/myclass` 目录中，使用如下命令对 java 代码进行编译，为保证编译成功，加入 `classpath` 变量，引入 `hadoop-core-1.1.2.jar` 包：
+在 `/opt/hadoop-2.9.2/myclass` 目录中，使用如下命令对 java 代码进行编译，为保证编译成功，加入 `classpath` 变量，引入 `hadoop-core-2.9.2.jar` 包：
 
 ```bash
-javac -classpath ../hadoop-core-1.1.2.jar *.java
+javac -classpath ../share/hadoop/common/hadoop-common-2.9.2.jar:../share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.2.jar Min*.java
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404474910/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404474910)
 
 **打包编译文件**
 
@@ -236,23 +249,31 @@ mv *.jar ..
 rm Min*.class
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404501775/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404501775)
 
 **解压气象数据并上传到 HDFS 中**
 
-气象数据在 `/home/shiyanlou/install-pack/class5/temperature` 子目录下。
+下载所需数据。
+
+```bash
+# 创建目录
+mkdir /home/shiyanlou/tempreature
+# 进入目录
+cd /home/shiyanlou/tempreature
+# 下载数据压缩包
+wget https://labfile.oss.aliyuncs.com/courses/237/temperature.zip
+```
 
 把 NCDC 气象数据解压，并使用 zcat 命令把这些数据文件解压并合并到一个 `temperature.txt` 文件中。
 
 ```bash
-cd /home/shiyanlou/install-pack/class5/temperature
-zcat *.gz > temperature.txt
+zcat */*.gz > temperature.txt
 tail temperature.txt
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404586595/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404586595)
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404595281/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404595281)
 
 气象数据具体的下载地址为 `ftp://ftp3.ncdc.noaa.gov/pub/data/noaa/`，该数据包括 1900 年到现在所有年份的气象数据，大小大概有 70 多个 G。为了测试简单，我们这里选取一部分的数据进行测试。合并后把这个文件上传到 HDFS 文件系统的 `/class5/in` 目录中：
 
@@ -262,18 +283,18 @@ hadoop fs -copyFromLocal temperature.txt /class5/in
 hadoop fs -ls /class5/in
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404623756/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404623756)
 
 **运行程序**
 
 以 jar 的方式启动 MapReduce 任务，执行输出目录为 `/class5/out`：
 
 ```bash
-cd /app/hadoop-1.1.2
+cd /opt/hadoop-2.9.2
 hadoop jar MinTemperature.jar MinTemperature /class5/in/temperature.txt  /class5/out
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404641286/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404641286)
 
 **查看结果**
 
@@ -284,39 +305,19 @@ hadoop fs -ls /class5/out
 hadoop fs -cat /class5/out/part-r-00000
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404655717/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404655717)
 
-**查看页面结果（由于实验楼环境是命令行界面，以下仅为说明运行过程和结果可以通过界面进行查看）**
+**查看页面结果**
 
-1. 查看 `jobtracker.jsp`。
+查看 `YARN WebUI`。
 
-```bash
-http://XX.XXX.XX.XXX:50030/jobtracker.jsp
-```
-
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404670007/wm)
-
-查看已经完成的作业任务：
-
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404681837/wm)
-
-任务的详细信息：
-
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404693660/wm)
-
-2. 查看 `dfshealth.jsp`。
+打开浏览器输入下列地址即可访问 YARN 的 Web 页面，其中会有对应的任务执行情况。
 
 ```bash
-http://XX.XXX.XX.XXX:50070/dfshealth.jsp
+http://localhost:8088
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404825788/wm)
-
-分别查看 HDFS 文件系统和日志：
-
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404836858/wm)
-
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404856318/wm)
+![图片描述](https://doc.shiyanlou.com/courses/237/2505524/1cbfa0f9ad387311421260fed777bc1a-0)
 
 ## 测试用例 2
 
@@ -460,10 +461,10 @@ public class AvgTemperatureReducer extends Reducer<Text, Text, Text, IntWritable
 
 **编写代码**
 
-进入 `/app/hadoop-1.1.2/myclass` 目录，在该目录中建立 `AvgTemperature.java`、`AvgTemperatureMapper.java`、`AvgTemperatureCombiner.java` 和`AvgTemperatureReducer.java` 代码文件，代码内容已在前面列出，执行命令如下：
+进入 `/opt/hadoop-2.9.2/myclass` 目录，在该目录中建立 `AvgTemperature.java`、`AvgTemperatureMapper.java`、`AvgTemperatureCombiner.java` 和`AvgTemperatureReducer.java` 代码文件，代码内容已在前面列出，执行命令如下：
 
 ```bash
-cd /app/hadoop-1.1.2/myclass/
+cd /opt/hadoop-2.9.2/myclass/
 vi AvgTemperature.java
 vi AvgTemperatureMapper.java
 vi AvgTemperatureCombiner.java
@@ -472,29 +473,29 @@ vi AvgTemperatureReducer.java
 
 `AvgTemperature.java`：
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404897200/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404897200)
 
 `AvgTemperatureMapper.java`：
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404910560/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404910560)
 
 `AvgTemperatureCombiner.java`：
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404921341/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404921341)
 
 `AvgTemperatureReducer.java`:
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404933651/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404933651)
 
 **编译代码**
 
-在 `/app/hadoop-1.1.2/myclass` 目录中，使用如下命令对 java 代码进行编译，为保证编译成功，加入 `classpath` 变量，引入 `hadoop-core-1.1.2.jar` 包：
+在 `/opt/hadoop-2.9.2/myclass` 目录中，使用如下命令对 java 代码进行编译，为保证编译成功，加入 `classpath` 变量，引入 `hadoop-core-2.9.2.jar` 包：
 
 ```bash
-javac -classpath ../hadoop-core-1.1.2.jar Avg*.java
+javac -classpath ../share/hadoop/common/hadoop-common-2.9.2.jar:../share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.2.jar Avg*.java
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404966539/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404966539)
 
 **打包编译文件**
 
@@ -507,18 +508,18 @@ mv *.jar ..
 rm Avg*.class
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404980052/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404980052)
 
 **运行程序**
 
 数据使用作业 2 求每年最低温度的气象数据，数据在 HDFS 位置为 `/class5/in/temperature.txt`，以 jar 的方式启动 MapReduce 任务，执行输出目录为 `/class5/out2`：
 
 ```bash
-cd /app/hadoop-1.1.2
+cd /opt/hadoop-2.9.2
 hadoop jar AvgTemperature.jar AvgTemperature /class5/in/temperature.txt /class5/out2
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404990642/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404990642)
 
 **查看结果**
 
@@ -529,4 +530,4 @@ hadoop fs -ls /class5/out2
 hadoop fs -cat /class5/out2/part-r-00000
 ```
 
-![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404999021/wm)
+![图片描述信息](https://doc.shiyanlou.com/userid29778labid1033time1433404999021)
