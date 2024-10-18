@@ -11,26 +11,21 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      - name: Get Changed Files
+      - name: 获取变更文件
         uses: trilom/file-changes-action@v1.2.4
         with:
           output: "json"
           fileOutput: "json"
-      - name: Use pip Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - name: Install labdocs-update-cli
+      - name: 安装 labdocs-update-cli
         run: |
           git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/lanqiao-courses/labdocs-update-cli.git
           cd labdocs-update-cli && pip install --editable .
-      - name: Sync Changed Files to lanqiao.cn
+      - name: 同步文档至蓝桥云课
+        # 同步修改和新增文件
         run: |
           labdocs login
           echo "===== 同步修改文件 ====="
-          labdocs update --file $HOME/files_modified.json --repo $GITHUB_REPOSITORY
+          labdocs update --file $HOME/files_modified.json
           echo "===== 同步新增文件 ====="
-          labdocs update --file $HOME/files_added.json --repo $GITHUB_REPOSITORY
+          labdocs update --file $HOME/files_added.json
+
